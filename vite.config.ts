@@ -51,11 +51,12 @@ export default defineConfig({
           const selector = e(rawSelector)
           // console.log(theme);
           // console.log({match, selector, rawSelector, currentSelector, variantHandlers});
+          //  @apply的末尾忘记写分号会导致编译报错，开发环境不会报错。
           return `
 ${selector} {
 position: relative;
 cursor: pointer;
-@apply border-l-2 pl-2 b-pink-2
+@apply border-l-2 pl-2 b-pink-2;
 }
 ${selector}::after {
 content: "${name.repeat(count)}";
