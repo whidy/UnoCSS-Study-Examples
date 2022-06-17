@@ -51,7 +51,7 @@ export default defineConfig({
           const selector = e(rawSelector)
           // console.log(theme);
           // console.log({match, selector, rawSelector, currentSelector, variantHandlers});
-          //  @apply的末尾忘记写分号会导致编译报错，开发环境不会报错。
+          //  @apply的末尾忘记写分号会导致编译报错，开发环境不会报错。错误信息大致是：js-unocss-hash.css:5:34: Unknown word
           return `
 ${selector} {
 position: relative;

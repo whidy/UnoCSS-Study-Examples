@@ -10,4 +10,8 @@
 
 ## 其他
 
-因为我还没找到主题切换后， `vite-plugin-md` 插件自动注入的 `markdown样式` 覆盖了我原有的样式，导致的**代码块**颜色异常问题的方案，所以，如果本地预览想要看到较好的效果，你可能需要在安装依赖后尝试修改文件 `node_modules/vite-plugin-md/dist/index.js` 的 `6712` 行，删除该行的 `baseStyling` 。重启服务，查看效果。相关的issues：[May I disable baseStyling for a custom markdown style](https://github.com/antfu/vite-plugin-md/issues/92)
+### 关于markdown样式冲突问题
+
+问题已解决，请更新到[v0.15.0](https://github.com/antfu/vite-plugin-md/releases/tag/v0.15.0)
+
+~~因为我还没找到主题切换后， `vite-plugin-md` 插件自动注入的 `markdown样式` 覆盖了我原有的样式，导致的**代码块**颜色异常问题的方案，所以，如果本地预览想要看到较好的效果，你可能需要在安装依赖后尝试修改文件 `node_modules/vite-plugin-md/dist/index.js` 的 `6712` 行，删除该行的 `baseStyling` 。重启服务，查看效果。相关的issues：[May I disable baseStyling for a custom markdown style](https://github.com/antfu/vite-plugin-md/issues/92)~~
