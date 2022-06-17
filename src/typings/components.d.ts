@@ -6,7 +6,10 @@ import '@vue/runtime-core'
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     ElAside: typeof import('element-plus/es')['ElAside']
+    ElCard: typeof import('element-plus/es')['ElCard']
     ElContainer: typeof import('element-plus/es')['ElContainer']
+    ElDivider: typeof import('element-plus/es')['ElDivider']
+    ElDrawer: typeof import('element-plus/es')['ElDrawer']
     ElHeader: typeof import('element-plus/es')['ElHeader']
     ElLink: typeof import('element-plus/es')['ElLink']
     ElMain: typeof import('element-plus/es')['ElMain']
@@ -15,6 +18,7 @@ declare module '@vue/runtime-core' {
     ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    VMenu: typeof import('./../components/VMenu.vue')['default']
   }
 }
 

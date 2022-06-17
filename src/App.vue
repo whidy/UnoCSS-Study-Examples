@@ -1,77 +1,77 @@
 <script lang="ts" setup>
 import { useDark, useToggle, usePreferredDark } from "@vueuse/core";
-import { router } from "./router";
+const drawerStatus = ref(false);
 // const prefersDark = usePreferredDark(); // 检测当前系统主题
-const handleSelect = (index: string) => {
-  router.push(`/${index}`);
+const handleToggle = () => {
+  drawerStatus.value = !drawerStatus.value;
 };
-
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
 </script>
 <template>
-  <el-container w-full>
+  <el-drawer
+    v-model="drawerStatus"
+    size="50%"
+    title="迷你菜单"
+    direction="ltr">
+    <VMenu menu-type="drawer" :status="drawerStatus" @toggle-drawer="handleToggle()" />
+  </el-drawer>
+  <el-container w-full flex>
     <el-header
+      h-10
+      sm:text-2xl
+      text-base
+      sm:h-12
+      px-2
+      sm:px-4
       shadow
       flex
       items-center
       justify-between
-      z-1>
-      <h1 m-0 text-2xl>这是一个内部培训PPT配套代码演示和说明</h1>
+      z-5>
+      <div flex justify-start items-center>
+        <div
+          i-carbon-menu
+          block
+          sm:hidden
+          w-4
+          sm:w-6
+          mr-2
+          @click="handleToggle()"></div>
+        <div m-0 truncate>UnoCSS技术分享代码演示和说明</div>
+      </div>
       <!-- <div>{{ prefersDark }}</div> -->
-      <div class="w-1/5 flex justify-end">
-        <el-link i-mdi-theme-light-dark @click="toggleDark()" />
+      <div class="w-1/6 flex justify-end">
         <el-link
-          ml-3
+          i-mdi-theme-light-dark
+          w-5
+          sm:w-6
+          @click="toggleDark()" />
+        <el-link
           i-mdi-github
+          ml-3
+          w-5
+          sm:w-6
           href="https://github.com/whidy/UnoCSS-Study-Examples"
           target="_blank" />
       </div>
     </el-header>
-    <el-container>
-      <el-aside width="200px">
-        <el-menu
-          default-active="Customizable"
-          border-0
-          h-full
-          active-text-color="#ffd04b"
-          background-color="#545c64"
-          text-color="#fff"
-          @select="handleSelect">
-          <el-menu-item index="Customizable">
-            <span>高可定制</span>
-          </el-menu-item>
-          <el-menu-item index="Shortcuts">
-            <span>简写模式</span>
-          </el-menu-item>
-          <el-menu-item index="Attributify">
-            <span>属性化模式</span>
-          </el-menu-item>
-          <el-menu-item index="CSSIcon">
-            <span>纯CSS图标</span>
-          </el-menu-item>
-          <el-menu-item index="VariantGroups">
-            <span>可变修饰分组</span>
-          </el-menu-item>
-          <el-menu-item index="CSSDirectives">
-            <span>CSS指令</span>
-          </el-menu-item>
-          <el-menu-item index="Compilation">
-            <span>编译模式</span>
-          </el-menu-item>
-          <el-menu-item index="Inspector">
-            <span>调试模式</span>
-          </el-menu-item>
-        </el-menu>
+    <el-container flex-1>
+      <el-aside sm:w-40 sm:block hidden>
+        <VMenu />
       </el-aside>
-      <el-main h-full p-0 flex-1>
-        <el-scrollbar>
-          <router-view p-4 />
-        </el-scrollbar>
+      <el-main p-0 overflow-hidden>
+        <router-view h-screen />
       </el-main>
     </el-container>
   </el-container>
 </template>
 
-<style scoped>
+<style>
+.el-drawer__header {
+  @apply mb-4;
+}
+.el-drawer__body {
+  @apply p-0;
+}
 </style>

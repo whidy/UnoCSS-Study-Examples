@@ -10,14 +10,14 @@ import Customizable from '@/views/TheCustomizable.vue'
 
 const routes = [
   { path: '/', redirect: '/Customizable' },
-  { path: '/Customizable', component: Customizable },
-  { path: '/Shortcuts', component: Shortcuts },
-  { path: '/Attributify', component: Attributify },
-  { path: '/CSSIcon', component: CSSIcon },
-  { path: '/VariantGroups', component: VariantGroups },
-  { path: '/CSSDirectives', component: CSSDirectives },
-  { path: '/Compilation', component: Compilation },
-  { path: '/Inspector', component: Inspector },
+  { path: '/Customizable', name: "Customizable", component: Customizable },
+  { path: '/Shortcuts', name: "Shortcuts", component: Shortcuts },
+  { path: '/Attributify', name: "Attributify", component: Attributify },
+  { path: '/CSSIcon', name: "CSSIcon", component: CSSIcon },
+  { path: '/VariantGroups', name: "VariantGroups", component: VariantGroups },
+  { path: '/CSSDirectives', name: "CSSDirectives", component: CSSDirectives },
+  { path: '/Compilation', name: "Compilation", component: Compilation },
+  { path: '/Inspector', name: "Inspector", component: Inspector },
 ]
 
 export const router = createRouter({

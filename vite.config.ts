@@ -47,7 +47,7 @@ export default defineConfig({
 
     Unocss({
       rules: [
-        [/^(whidy)-(\d+)$/, ([, name, count], { rawSelector, currentSelector, variantHandlers, theme }) => {
+        [/^name-(.+)-(\d+)$/, ([, name, count], { rawSelector, currentSelector, variantHandlers, theme }) => {
           const selector = e(rawSelector)
           // console.log(theme);
           // console.log({match, selector, rawSelector, currentSelector, variantHandlers});
@@ -56,14 +56,15 @@ export default defineConfig({
 ${selector} {
 position: relative;
 cursor: pointer;
-@apply border-l-2 pl-2 b-pink-2;
+@apply border-l-2 pl-2 b-pink-2 mb-4;
 }
 ${selector}::after {
-content: "${name.repeat(count)}";
+content: "${name.concat('~').repeat(count)}";
 font-size: 1.5em;
 position: absolute;
-top: 0.25em;
-left: 0.5em;
+top: 0;
+left: 0;
+transform: translate(20%, 0%);
 color: ${theme.colors.pink[2]};
 }
 ${selector}:hover::after {
@@ -74,6 +75,9 @@ ${selector}:hover::after {
             layer: 'whidy'
           }],
       ],
+      // shortcuts: [
+      //   {'drawer-menu': 'w-1/2'}
+      // ],
       presets: [
         presetUno(),
         presetAttributify(),
