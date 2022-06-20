@@ -1,9 +1,16 @@
 <template>
-  <div>
-    正在开发
-  </div>
+  <the-content-layout>
+    <template #content>
+      <markdownContent p-4 />
+    </template>
+    <template #demo>
+    </template>
+  </the-content-layout>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import markdownContent from "./contents/VariantGroups.md";
+</script>
 
-<style scoped></style>
+<style scoped>
+</style>

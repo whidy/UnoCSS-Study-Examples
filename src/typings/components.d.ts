@@ -18,6 +18,7 @@ declare module '@vue/runtime-core' {
     ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TheContentLayout: typeof import('./../components/TheContentLayout.vue')['default']
     VMenu: typeof import('./../components/VMenu.vue')['default']
   }
 }

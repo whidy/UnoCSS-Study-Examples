@@ -1,12 +1,22 @@
 <script lang="ts" setup>
-import { useDark, useToggle, usePreferredDark } from "@vueuse/core";
+import { useDark, useToggle, useWindowSize, usePreferredDark } from "@vueuse/core";
+import type { Ref } from "vue";
 const drawerStatus = ref(false);
+// const { width } = useWindowSize();
+const header = ref<Ref | null | HTMLDivElement>(null);
+const headerHeight = ref(48);
 // const prefersDark = usePreferredDark(); // 检测当前系统主题
 const handleToggle = () => {
   drawerStatus.value = !drawerStatus.value;
 };
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
+onMounted(() => {
+  headerHeight.value = header.value.$el.clientHeight;
+});
+// watch(width, (newHeight) => {
+//   headerHeight.value = header.value.$el.clientHeight;
+// });
 </script>
 <template>
   <el-drawer
@@ -18,6 +28,7 @@ const toggleDark = useToggle(isDark);
   </el-drawer>
   <el-container w-full flex>
     <el-header
+      ref="header"
       h-10
       sm:text-2xl
       text-base
@@ -56,12 +67,12 @@ const toggleDark = useToggle(isDark);
           target="_blank" />
       </div>
     </el-header>
-    <el-container flex-1>
+    <el-container overflow-hidden>
       <el-aside sm:w-40 sm:block hidden>
         <VMenu />
       </el-aside>
-      <el-main p-0 overflow-hidden>
-        <router-view h-screen />
+      <el-main p-0>
+        <router-view :style="`height:calc(100vh - ${headerHeight}px)`" />
       </el-main>
     </el-container>
   </el-container>
@@ -71,6 +82,7 @@ const toggleDark = useToggle(isDark);
 .el-drawer__header {
   @apply mb-4;
 }
+
 .el-drawer__body {
   @apply p-0;
 }
