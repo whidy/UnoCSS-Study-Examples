@@ -86,4 +86,8 @@ onMounted(() => {
 .el-drawer__body {
   @apply p-0;
 }
+
+.el-card {
+  @apply mb-4;
+}
 </style>

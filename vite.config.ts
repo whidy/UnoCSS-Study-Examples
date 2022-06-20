@@ -75,9 +75,14 @@ ${selector}:hover::after {
             layer: "whidy"
           }],
       ],
-      // shortcuts: [
-      //   {'drawer-menu': 'w-1/2'}
-      // ],
+      shortcuts: [
+        {
+          'gradient-header': 'text-2xl font-bold bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent',
+        },
+        [
+          /^gradient-(\w+)-(\w+)$/, ([, colorFrom, colorTo]) => `bg-gradient-to-r from-${colorFrom}-400 to-${colorTo}-500  bg-clip-text text-transparent`
+        ]
+      ],
       presets: [
         presetUno(),
         presetAttributify(),
