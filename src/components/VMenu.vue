@@ -1,6 +1,6 @@
 <template>
   <el-menu
-    :default-active="routeName"
+    :default-active="activedItem"
     :class="menuType === 'drawer' && 'p-0'"
     border-0
     h-full
@@ -34,7 +34,8 @@
 
 <script setup lang="ts">
 import { router } from "@/router";
-const routeName = ref(router.currentRoute.value.name);
+const routeName = router.currentRoute.value.name as string;
+const activedItem = ref(routeName);
 const props = defineProps({
   menuType: {
     type: String,
@@ -49,7 +50,7 @@ const props = defineProps({
 const emit = defineEmits(["toggleDrawer"]);
 
 watch(router.currentRoute, (currentRoute) => {
-  routeName.value = currentRoute.name;
+  activedItem.value = currentRoute.name as string;
 });
 
 const handleSelect = (index: string) => {

@@ -1,4 +1,5 @@
 auto-imports.d.ts
 components.d.ts
+shims.d.ts
 pnpm-lock.yaml
 *.md
