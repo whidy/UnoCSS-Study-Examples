@@ -1,12 +1,14 @@
 # UnoCSS Study Examples
 
-> 当前资料对应的UnoCSS版本为 `0.39.0` ，其他版本请参见 `package.json` 。
+> 当前资料对应的UnoCSS版本为 `0.39.x` ，其他版本请参见 `package.json` 。
 
 这是个人在研究学习UnoCSS过程中做的总结，也是作为公司内部培训分享用到的PPT相关演示，仅供学习参考。
 
 后期可能会整理成一份实践文档，发布出来。
 
 该项目由 `Vite` 、 `Element-Plus` 搭建，有兴趣也可以看看[Vite-Element-Plus-UnoCSS](https://github.com/whidy/Vite-Element-Plus-UnoCSS)。
+
+该项目适合搭建一个简单的**文档演示模板**站，我是通过Markdown来编写文档内容部分，并将结构完善，利于代码演示部分的展示，后面有空再优化整个模板的布局。
 
 ## 其他
 

@@ -16,7 +16,7 @@
           <span gradient-teal-blue>I Love Whidy</span>
         </div>
         <div my-2>
-          <span gradient-red-yellow>Hello Yellow Boy</span>
+          <span gradient-red-yellow>Hello Smart Boy</span>
         </div>
       </el-card>
     </template>

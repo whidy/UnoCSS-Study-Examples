@@ -1,11 +1,12 @@
+html.dark {
+  /* 自定义深色背景颜色 */
+  --el-bg-color: #0d1117;
+}
+
 html,
 body{
   margin: 0;
   padding: 0;
   overflow: hidden;
-}
-
-html.dark {
-  /* 自定义深色背景颜色 */
-  --el-bg-color: #0d1117;
+  background-color: var(--el-bg-color);
 }

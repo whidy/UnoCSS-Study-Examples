@@ -1,6 +1,6 @@
 ## Fully customizable - no core utilities, all functionalities are provided via presets.
 
-> 如何高可定制？
+> 高可定制，没有必要的核心工具类，所有的功能都是通过不断强大的预设来实现的。
 
 比如这几个类名的写法: `ml-3` (Tailwind), `ms-2` (Bootstrap), `ma4` (Tachyons), and `mt-10px` (Windi CSS) 都是有效的。
 

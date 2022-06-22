@@ -5,6 +5,9 @@
     border-0
     h-full
     @select="handleSelect">
+    <el-menu-item index="Intro">
+      <span>前言</span>
+    </el-menu-item>
     <el-menu-item index="Customizable">
       <span>高可定制</span>
     </el-menu-item>

@@ -29,10 +29,8 @@ onMounted(() => {
   <el-container w-full flex>
     <el-header
       ref="header"
-      h-10
-      sm:text-2xl
       text-base
-      sm:h-12
+      h-12
       px-2
       sm:px-4
       shadow
@@ -40,12 +38,15 @@ onMounted(() => {
       items-center
       justify-between
       z-5>
-      <div flex justify-start items-center>
+      <div
+        flex
+        justify-start
+        items-center
+        w-full>
         <div
           i-carbon-menu
-          block
           sm:hidden
-          w-4
+          w-5
           sm:w-6
           mr-2
           @click="handleToggle()"></div>

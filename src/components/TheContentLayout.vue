@@ -6,7 +6,9 @@
       </slot>
     </el-scrollbar>
     <el-scrollbar
-      flex-1
+      :class="hasDemo ? '' : 'hidden'"
+      h-64
+      sm:h-auto
       sm:flex-1
       xl:flex-1
       lg:w-sm
@@ -25,7 +27,13 @@
 </template>
 
 <script setup lang="ts">
-
+const props = defineProps({
+  hasDemo: {
+    type: Boolean,
+    default: true,
+  }
+});
+const hasDemo = props.hasDemo === undefined ? true : props.hasDemo;
 </script>
 
 <style scoped>

@@ -1,4 +1,5 @@
 import { createRouter, createWebHashHistory } from "vue-router";
+import Intro from "@/views/TheIntro.vue";
 import Shortcuts from "@/views/TheShortcuts.vue";
 import Attributify from "@/views/TheAttributify.vue";
 import CSSIcon from "@/views/TheCSSIcon.vue";
@@ -9,7 +10,8 @@ import Inspector from "@/views/TheInspector.vue";
 import Customizable from "@/views/TheCustomizable.vue";
 
 const routes = [
-  { path: "/", redirect: "/Customizable" },
+  { path: "/", redirect: "/Intro" },
+  { path: "/Intro", name: "Intro", component: Intro },
   { path: "/Customizable", name: "Customizable", component: Customizable },
   { path: "/Shortcuts", name: "Shortcuts", component: Shortcuts },
   { path: "/Attributify", name: "Attributify", component: Attributify },
