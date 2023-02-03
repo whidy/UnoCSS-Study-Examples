@@ -26,7 +26,7 @@
 
 #### UnoCSS文档主页
 
-![UnoCSS文档主页](/public/images/UnoCSS_Index.png)
+![UnoCSS文档主页](/images/UnoCSS_Index.png)
 
 上图我分为主要的三个部分：
 
@@ -38,7 +38,7 @@
 
 #### UnoCSS文档内容
 
-![UnoCSS文档内容](/public/images/UnoCSS_Docs.png)
+![UnoCSS文档内容](/images/UnoCSS_Docs.png)
 
 文档部分主要有两种，一种是输入 `guide:` 来查询UnoCSS的核心内容，也算是UnoCSS生态相关的信息；另一种则是不熟悉各种规则的朋友，通过输入CSS样式关键词，快速查阅有效的类名写法的例子。
 

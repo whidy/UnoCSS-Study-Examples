@@ -4,7 +4,7 @@ import Vue from "@vitejs/plugin-vue";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
-import Markdown from "vite-plugin-md";
+import Markdown from "vite-plugin-vue-markdown";
 import Inspect from "vite-plugin-inspect";
 import { toEscapedSelector as e } from "unocss";
 import Unocss from "unocss/vite";
@@ -15,7 +15,7 @@ import {
   transformerDirectives,
   transformerVariantGroup,
 } from "unocss";
-import MarkdownItPrism from "markdown-it-prism"
+import MarkdownItPrism from "markdown-it-prism";
 const pathSrc = path.resolve(__dirname, "src");
 
 export default defineConfig({
@@ -77,7 +77,7 @@ ${selector}:hover::after {
       ],
       shortcuts: [
         {
-          'gradient-header': 'text-2xl font-bold bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent',
+          "gradient-header": "text-2xl font-bold bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent",
         },
         [
           /^gradient-(\w+)-(\w+)$/, ([, colorFrom, colorTo]) => `bg-gradient-to-r from-${colorFrom}-400 to-${colorTo}-500  bg-clip-text text-transparent`
