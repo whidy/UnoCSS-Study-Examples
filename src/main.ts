@@ -8,6 +8,7 @@ import "@/style/index.scss";
 import "@/style/github-markdown.css";
 import "@/style/prism.scss";
 import "uno:whidy.css";
+import "virtual:unocss-devtools";
 const app = createApp(App);
 app.use(router);
 app.mount("#app");

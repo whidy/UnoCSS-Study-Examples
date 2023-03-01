@@ -112,4 +112,7 @@ ${selector}:hover::after {
     }),
     Inspect(),
   ],
+  server: {
+    port: 3002,
+  }
 });

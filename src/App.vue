@@ -1,5 +1,10 @@
 <script lang="ts" setup>
-import { useDark, useToggle, useWindowSize, usePreferredDark } from "@vueuse/core";
+import {
+  useDark,
+  useToggle,
+  useWindowSize,
+  usePreferredDark,
+} from "@vueuse/core";
 import type { Ref } from "vue";
 const drawerStatus = ref(false);
 // const { width } = useWindowSize();
@@ -24,25 +29,28 @@ onMounted(() => {
     size="50%"
     title="迷你菜单"
     direction="ltr">
-    <VMenu menu-type="drawer" :status="drawerStatus" @toggle-drawer="handleToggle()" />
+    <VMenu
+      menu-type="drawer"
+      :status="drawerStatus"
+      @toggle-drawer="handleToggle()" />
   </el-drawer>
   <el-container w-full flex>
     <el-header
       ref="header"
+      flex
       text-base
       h-12
       px-2
       sm:px-4
       shadow
-      flex
       items-center
       justify-between
       z-5>
       <div
         flex
-        justify-start
         items-center
-        w-full>
+        w-full
+        justify-start>
         <div
           i-carbon-menu
           sm:hidden
@@ -53,17 +61,17 @@ onMounted(() => {
         <div m-0 truncate>UnoCSS技术分享代码演示和说明</div>
       </div>
       <!-- <div>{{ prefersDark }}</div> -->
-      <div class="w-1/6 flex justify-end">
+      <div class="flex w-1/6 justify-end">
         <el-link
-          i-mdi-theme-light-dark
           w-5
           sm:w-6
+          i-mdi-theme-light-dark
           @click="toggleDark()" />
         <el-link
-          i-mdi-github
-          ml-3
           w-5
           sm:w-6
+          i-mdi-github
+          ml-3
           href="https://github.com/whidy/UnoCSS-Study-Examples"
           target="_blank" />
       </div>

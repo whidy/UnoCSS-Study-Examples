@@ -1,6 +1,6 @@
 <template>
   <div flex lg:flex-row flex-col>
-    <el-scrollbar flex-1 shadow z-1>
+    <el-scrollbar shadow flex-1 z-1>
       <slot name="content">
         内容部分
       </slot>

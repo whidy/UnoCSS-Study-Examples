@@ -36,7 +36,7 @@ const INLINE_ELEMENTS = [
   "time",
   "u",
   "var",
-  "video"
+  "video",
 ];
 
 module.exports = {
@@ -51,6 +51,7 @@ module.exports = {
     "plugin:vue/vue3-recommended",
     "eslint:recommended",
     "@vue/eslint-config-typescript/recommended",
+    "@unocss",
   ],
   parserOptions: {
     ecmaVersion: 2021,
