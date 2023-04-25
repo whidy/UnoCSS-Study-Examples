@@ -9,8 +9,9 @@
     "build": "pnpm run typecheck && vite build",
     "typecheck": "vue-tsc --noEmit",
     "preview": "vite preview",
+    "prettier": "prettier --config .prettierrc --write .",
     "lint": "eslint --ext .ts,vue --ignore-pattern '!.*ignore' .",
-    "lint:fix": "pnpm lint --fix"
+    "lint:fix": "pnpm lint --fix && pnpm prettier"
   },
   "dependencies": {
     "@vueuse/core": "^9.13.0",
@@ -36,6 +37,7 @@
     "eslint-define-config": "^1.19.0",
     "eslint-plugin-vue": "^9.11.0",
     "markdown-it-prism": "^2.3.0",
+    "prettier": "^2.8.8",
     "sass": "^1.62.0",
     "typescript": "^5.0.4",
     "unocss": "^0.51.8",

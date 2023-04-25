@@ -1,4 +1,3 @@
-
 import path from "path";
 import { defineConfig } from "vite";
 import Vue from "@vitejs/plugin-vue";
@@ -8,14 +7,6 @@ import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 import Markdown from "vite-plugin-vue-markdown";
 import Inspect from "vite-plugin-inspect";
 import Unocss from "unocss/vite";
-import {
-  presetAttributify,
-  presetIcons,
-  presetUno,
-  transformerDirectives,
-  transformerVariantGroup,
-} from "unocss";
-import { rules, shortcuts } from "./unocss/configs";
 import MarkdownItPrism from "markdown-it-prism";
 const pathSrc = path.resolve(__dirname, "src");
 
@@ -46,39 +37,10 @@ export default defineConfig({
       dts: path.resolve(pathSrc, "typings", "components.d.ts"),
     }),
 
-    Unocss({
-      rules,
-      shortcuts,
-      presets: [
-        presetUno(),
-        presetAttributify(),
-        presetIcons({
-          // collections: {
-          //   carbon: () => import('@iconify-json/carbon/icons.json', {
-          //     assert: { type: 'json' }
-          //   }).then(i => i.default),
-          //   mdi: () => import('@iconify-json/mdi/icons.json', {
-          //     assert: { type: 'json' }
-          //   }).then(i => i.default),
-          // },
-          customizations: {
-            iconCustomizer(collection, icon, props) {
-              props.width = "2em";
-              props.height = "2em";
-            },
-            // customize(props) { // does not work
-            //   props.width = '5.2em'
-            //   props.height = '2em'
-            //   return props
-            // }
-          }
-        }),
-      ],
-      transformers: [transformerDirectives(), transformerVariantGroup()],
-    }),
+    Unocss(),
     Inspect(),
   ],
   server: {
     port: 3002,
-  }
+  },
 });

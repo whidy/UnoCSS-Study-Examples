@@ -2,7 +2,7 @@ import { createApp } from "vue";
 import { router } from "@/router";
 import App from "./App.vue";
 import "@unocss/reset/normalize.css";
-import "uno.css";
+import "virtual:uno.css";
 import "element-plus/theme-chalk/dark/css-vars.css";
 import "@/style/index.scss";
 import "@/style/github-markdown.css";

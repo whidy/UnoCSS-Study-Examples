@@ -2,9 +2,10 @@
   <el-menu
     :default-active="activedItem"
     :class="menuType === 'drawer' && 'p-0'"
-    border-0
     h-full
-    @select="handleSelect">
+    border-0
+    @select="handleSelect"
+  >
     <el-menu-item index="Intro">
       <span>前言</span>
     </el-menu-item>
@@ -42,12 +43,12 @@ const activedItem = ref(routeName);
 const props = defineProps({
   menuType: {
     type: String,
-    default: ""
+    default: "",
   },
   status: {
     type: Boolean,
-    default: false
-  }
+    default: false,
+  },
 });
 
 const emit = defineEmits(["toggleDrawer"]);
@@ -64,5 +65,4 @@ const handleSelect = (index: string) => {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

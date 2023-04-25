@@ -4,7 +4,7 @@
 
 这个编写的方式和[ `Rules` ](./Customizable)的写法非常相似，这里就不赘述了。
 
-UnoCSS官方以btn组件扩展进行举例，可以参考：[Shortcuts文档](https://github.com/unocss/unocss#shortcuts)。
+UnoCSS 官方以 btn 组件扩展进行举例，可以参考：[Shortcuts 文档](https://github.com/unocss/unocss#shortcuts)。
 
 我这里也写了两个 `Shortcuts`
 

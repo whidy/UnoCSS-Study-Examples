@@ -10,5 +10,4 @@
 import markdownContent from "./contents/Intro.md";
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

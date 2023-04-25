@@ -24,60 +24,52 @@ onMounted(() => {
 // });
 </script>
 <template>
-  <el-drawer
-    v-model="drawerStatus"
-    size="50%"
-    title="迷你菜单"
-    direction="ltr">
+  <el-drawer v-model="drawerStatus" size="50%" title="迷你菜单" direction="ltr">
     <VMenu
       menu-type="drawer"
       :status="drawerStatus"
-      @toggle-drawer="handleToggle()" />
+      @toggle-drawer="handleToggle()"
+    />
   </el-drawer>
   <el-container w-full flex>
     <el-header
       ref="header"
-      flex
-      text-base
+      z-5
       h-12
-      px-2
-      sm:px-4
-      shadow
+      flex
       items-center
       justify-between
-      z-5>
-      <div
-        flex
-        items-center
-        w-full
-        justify-start>
+      px-2
+      text-base
+      shadow
+      sm:px-4
+    >
+      <div w-full flex items-center justify-start>
         <div
           i-carbon-menu
-          sm:hidden
-          w-5
-          sm:w-6
           mr-2
-          @click="handleToggle()"></div>
+          w-5
+          sm:hidden
+          sm:w-6
+          @click="handleToggle()"
+        ></div>
         <div m-0 truncate>UnoCSS技术分享代码演示和说明</div>
       </div>
       <!-- <div>{{ prefersDark }}</div> -->
-      <div class="flex w-1/6 justify-end">
+      <div class="w-1/6 flex justify-end">
+        <el-link i-mdi-theme-light-dark w-5 sm:w-6 @click="toggleDark()" />
         <el-link
-          w-5
-          sm:w-6
-          i-mdi-theme-light-dark
-          @click="toggleDark()" />
-        <el-link
-          w-5
-          sm:w-6
           i-mdi-github
           ml-3
+          w-5
+          sm:w-6
           href="https://github.com/whidy/UnoCSS-Study-Examples"
-          target="_blank" />
+          target="_blank"
+        />
       </div>
     </el-header>
     <el-container overflow-hidden>
-      <el-aside sm:w-40 sm:block hidden>
+      <el-aside hidden sm:block sm:w-40>
         <VMenu />
       </el-aside>
       <el-main p-0>

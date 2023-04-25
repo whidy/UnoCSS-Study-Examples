@@ -3,12 +3,17 @@ import type { Rule, UserShortcuts } from "unocss";
 import { toEscapedSelector as e } from "unocss";
 export const rules: Rule[] = [
   // 请注意，[, name, count]内的所有变量都是String类型，可以查阅，故而下方使用repeat时转换成数字类型
-  [/^name-(.+)-(\d+)$/, ([, name, count], { rawSelector, currentSelector, variantHandlers, theme }) => {
-    const selector = e(rawSelector);
-    // console.log(theme);
-    // console.log({match, selector, rawSelector, currentSelector, variantHandlers});
-    //  @apply的末尾忘记写分号会导致编译报错，开发环境不会报错。错误信息大致是：js-unocss-hash.css:5:34: Unknown word
-    return `
+  [
+    /^name-(.+)-(\d+)$/,
+    (
+      [, name, count],
+      { rawSelector, currentSelector, variantHandlers, theme }
+    ) => {
+      const selector = e(rawSelector);
+      // console.log(theme);
+      // console.log({match, selector, rawSelector, currentSelector, variantHandlers});
+      //  @apply的末尾忘记写分号会导致编译报错，开发环境不会报错。错误信息大致是：js-unocss-hash.css:5:34: Unknown word
+      return `
 ${selector} {
 position: relative;
 cursor: pointer;
@@ -27,15 +32,20 @@ ${selector}:hover::after {
 color: ${theme.colors.pink[4]};
 }
 `;
-  }, {
-      layer: "whidy"
-    }],
+    },
+    {
+      layer: "whidy",
+    },
+  ],
 ];
 export const shortcuts: UserShortcuts = [
   {
-    "gradient-header": "text-2xl font-bold bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent",
+    "gradient-header":
+      "text-2xl font-bold bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent",
   }, // ShortcutValue
   [
-    /^gradient-(\w+)-(\w+)$/, ([, colorFrom, colorTo]) => `bg-gradient-to-r from-${colorFrom}-400 to-${colorTo}-500  bg-clip-text text-transparent`
-  ] // Shortcut
+    /^gradient-(\w+)-(\w+)$/,
+    ([, colorFrom, colorTo]) =>
+      `bg-gradient-to-r from-${colorFrom}-400 to-${colorTo}-500  bg-clip-text text-transparent`,
+  ], // Shortcut
 ];

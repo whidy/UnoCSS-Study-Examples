@@ -3,8 +3,7 @@
     <template #content>
       <markdownContent p-4 />
     </template>
-    <template #demo>
-    </template>
+    <template #demo> </template>
   </the-content-layout>
 </template>
 
@@ -12,5 +11,4 @@
 import markdownContent from "./contents/Attributify.md";
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

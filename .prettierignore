@@ -3,3 +3,7 @@ dist
 pnpm-lock.yaml
 auto-imports.d.ts
 components.d.ts
+env.d.ts
+iconfont.js
+.DS_Store
+.history

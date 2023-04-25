@@ -46,8 +46,8 @@ ${selector}:hover::after {
 如果在模板中使用代码如下：
 
 ```html
-<div name-whidy-2>I Love </div>
-<div name-YOU-5>I Love </div>
+<div name-whidy-2>I Love</div>
+<div name-YOU-5>I Love</div>
 ```
 
 这段规则将被解析对应的 `css` 代码：
@@ -210,4 +210,4 @@ ${selector}:hover::after {
 
 还不错吧~这是我临时想到的随便写的，这里解释下，我实际写了一个伪类 `::after` ，并 `repeat` 这个 `class` 的前缀 `whidy` 外加重复 `n` 次的后缀。
 
-因此你想**输出100个whidy~**，只需要写 `whidy-100` 。灵活性非常强大。通过这个例子，我想你应该就能完全理解 `rules` 的用法了~
+因此你想**输出 100 个 whidy~**，只需要写 `whidy-100` 。灵活性非常强大。通过这个例子，我想你应该就能完全理解 `rules` 的用法了~

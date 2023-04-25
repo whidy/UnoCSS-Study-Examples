@@ -27,5 +27,4 @@
 import markdownContent from "./contents/Shortcuts.md";
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
