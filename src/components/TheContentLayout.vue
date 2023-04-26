@@ -15,7 +15,9 @@
         w-2
         cursor-ew-resize
         bg-slate-100
+        dark:bg-black
         hover:bg-slate-200
+        hover:dark:bg-gray-900
         @mousedown="startResize"></div>
       <el-scrollbar
         class="right-panel"
@@ -58,8 +60,6 @@ const startResize = () => {
   document.addEventListener("mouseup", stopResize);
 };
 const handleResize = (event: MouseEvent) => {
-  console.log(event.clientX);
-
   if (resizing.value) {
     leftPanelWidth.value =
       event.clientX -

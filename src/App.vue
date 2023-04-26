@@ -83,7 +83,8 @@ onMounted(() => {
         border-slate-100
         border-r-solid
         sm:block
-        sm:w-40>
+        sm:w-40
+        dark:border-slate-800>
         <VMenu />
       </el-aside>
       <el-main p-0>

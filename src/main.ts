@@ -1,5 +1,6 @@
 import { createApp } from "vue";
 import { router } from "@/router";
+import LogRocket from "logrocket";
 import App from "./App.vue";
 import "@unocss/reset/normalize.css";
 import "virtual:uno.css";
@@ -9,6 +10,7 @@ import "@/style/github-markdown.css";
 import "@/style/prism.scss";
 import "uno:whidy.css";
 import "virtual:unocss-devtools";
+LogRocket.init("4hsopa/unocss");
 const app = createApp(App);
 app.use(router);
 app.mount("#app");

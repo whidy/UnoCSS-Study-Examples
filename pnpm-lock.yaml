@@ -19,6 +19,7 @@ specifiers:
   eslint: ^8.39.0
   eslint-define-config: ^1.19.0
   eslint-plugin-vue: ^9.11.0
+  logrocket: ^4.0.0
   markdown-it-prism: ^2.3.0
   prettier: ^2.8.8
   sass: ^1.62.0
@@ -37,6 +38,7 @@ specifiers:
 dependencies:
   '@vueuse/core': 9.13.0_vue@3.2.47
   element-plus: 2.3.4_vue@3.2.47
+  logrocket: 4.0.0
   vue: 3.2.47
   vue-router: 4.1.6_vue@3.2.47
 
@@ -1970,6 +1972,10 @@ packages:
 
   /lodash/4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+
+  /logrocket/4.0.0:
+    resolution: {integrity: sha512-GZmn6zZPV+YpuLHsnASYmM5tqCmbDnq0Xdh+jPtP2YGScXvUfiapILV0QuclMA5HEf+ZntcwhYFg0iiwxyTz5A==}
+    dev: false
 
   /lru-cache/6.0.0:
     resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
