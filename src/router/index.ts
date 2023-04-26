@@ -8,6 +8,7 @@ import CSSDirectives from "@/views/TheCSSDirectives.vue";
 import Compilation from "@/views/TheCompilation.vue";
 import Inspector from "@/views/TheInspector.vue";
 import Customizable from "@/views/TheCustomizable.vue";
+import Thinkings from "@/views/TheThinkings.vue";
 
 const routes = [
   { path: "/", redirect: "/Intro" },
@@ -20,6 +21,7 @@ const routes = [
   { path: "/CSSDirectives", name: "CSSDirectives", component: CSSDirectives },
   { path: "/Compilation", name: "Compilation", component: Compilation },
   { path: "/Inspector", name: "Inspector", component: Inspector },
+  { path: "/Thinkings", name: "Thinkings", component: Thinkings },
 ];
 
 export const router = createRouter({

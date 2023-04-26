@@ -4,8 +4,7 @@
     :class="menuType === 'drawer' && 'p-0'"
     h-full
     border-0
-    @select="handleSelect"
-  >
+    @select="handleSelect">
     <el-menu-item index="Intro">
       <span>前言</span>
     </el-menu-item>
@@ -32,6 +31,9 @@
     </el-menu-item>
     <el-menu-item index="Inspector">
       <span>调试模式</span>
+    </el-menu-item>
+    <el-menu-item index="Thinkings">
+      <span>个人思考</span>
     </el-menu-item>
   </el-menu>
 </template>

@@ -1,6 +1,6 @@
 {
   "name": "unocss-study-examples",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "packageManager": "pnpm@7.2.1",
   "author": "whidy",
@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "prettier": "prettier --config .prettierrc --write .",
     "lint": "eslint --ext .ts,vue --ignore-pattern '!.*ignore' .",
-    "lint:fix": "pnpm lint --fix && pnpm prettier"
+    "lint:fix": "pnpm lint --fix && pnpm prettier && pnpm lint --fix"
   },
   "dependencies": {
     "@vueuse/core": "^9.13.0",

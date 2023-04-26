@@ -37,7 +37,9 @@ export default defineConfig({
       dts: path.resolve(pathSrc, "typings", "components.d.ts"),
     }),
 
-    Unocss(),
+    Unocss({
+      configFile: "./uno.config.ts",
+    }),
     Inspect(),
   ],
   server: {

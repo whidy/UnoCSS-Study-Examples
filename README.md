@@ -22,4 +22,4 @@
 
 ### 2023 年 04 月 25 日
 
-更新到 `0.51.8` ，新增了 `uno.config.ts` 文件，发现使用 `eslint` 进行自动 `fix` 时，会出现大量的空行，故引入 `prettier` ，双重处理。（当然务必注意eslint配置和prettier不要冲突！！！）
+更新到 `0.51.8` ，新增了 `uno.config.ts` 文件，发现使用 `eslint` 进行自动 `fix` 时，会出现大量的空行，故引入 `prettier` ，双重处理，然而 `prettier` 的最终效果我并不喜欢，因此又操作了一次 `lint:fix` 。（当然务必注意 eslint 配置和 prettier 不要冲突！！！）

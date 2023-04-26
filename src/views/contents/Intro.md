@@ -1,6 +1,8 @@
-## UnoCSS - The instant on-demand Atomic CSS engine.
+## UnoCSS - Instant On-demand Atomic CSS Engine
 
 > [**UnoCSS**](https://github.com/unocss/unocss) - 具有高性能且极具灵活性的即时原子化 CSS 引擎。
+
+Main Features（主要特性）： **Customizable**（灵活定制） · **Powerful** （超猛）· **Fast** （超快）· **Joyful**（超爽）！！！
 
 如果熟悉 `bootstrap` 、 `Tailwind CSS` 或者 `Windi CSS` 的话，会发现 `UnoCSS` 上手十分容易。
 
@@ -13,6 +15,12 @@
 - UnoCSS 仍在高速的版本迭代不断完善的过程中，遇见 BUG 不要慌，先**仔细阅读相关文档**并**检查代码**是否有不规范的使用问题，若技术有限，无法定位再去 Issues 区搜索一下，依然没有结果再去提一个 Issue，至于如何提 Issue，这也是个大学问，建议阅读[提問的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way)。
 
 ### 关于 UnoCSS 文档
+
+> 更新：2023 年 04 月 25 日
+
+由于这个示例是去年创建的，当时首页就是如下文所说。当然今年（2023 年）发现整个 UnoCSS 网站进行了大更新。所以，新的 UnoCSS 官方介绍和文档已经相当的完善了。各位，只需要访问[官方网站](https://unocss.dev/)，根据个人需要进行阅读和实践即可，当然我目前观察到，现在**只有英文版文档**。
+
+---
 
 > 起初看到这个 UnoCSS 的文档，我非常纳闷（挠头），这个文档很个性啊，这是个文档吗，咋用啊？大大的输入框，输入来探索（Type to explore），看起来互动性很强。下面写着：
 >
