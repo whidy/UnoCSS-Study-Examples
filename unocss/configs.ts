@@ -1,13 +1,19 @@
 import type { Rule, UserShortcuts } from "unocss";
 // import type { Theme } from "unocss/preset-uno";
 import { toEscapedSelector as e } from "unocss";
-export const rules: Rule[] = [
+export const rules = [
   // 请注意，[, name, count]内的所有变量都是String类型，可以查阅，故而下方使用repeat时转换成数字类型
   [
     /^name-(.+)-(\d+)$/,
     (
       [, name, count],
-      { rawSelector, currentSelector, variantHandlers, theme }
+      {
+        rawSelector,
+        theme,
+      }: {
+        rawSelector: string;
+        theme: any;
+      }
     ) => {
       const selector = e(rawSelector);
       // console.log(theme);
@@ -29,7 +35,7 @@ transform: translate(20%, 0%);
 color: ${theme.colors.pink[2]};
 }
 ${selector}:hover::after {
-color: ${theme.colors.pink[4]};
+color: ${theme.colors.pink[4]}
 }
 `;
     },
@@ -37,7 +43,7 @@ color: ${theme.colors.pink[4]};
       layer: "whidy",
     },
   ],
-];
+] as Rule[];
 export const shortcuts: UserShortcuts = [
   {
     "gradient-header":

@@ -51,19 +51,21 @@ const hasDemo = props.hasDemo === undefined ? true : props.hasDemo;
 const resizing = ref(false);
 const leftPanelWidth = ref(0);
 
-const startResize = (event) => {
+const startResize = () => {
   resizing.value = true;
 
   document.addEventListener("mousemove", handleResize);
   document.addEventListener("mouseup", stopResize);
 };
-const handleResize = (event) => {
+const handleResize = (event: MouseEvent) => {
   console.log(event.clientX);
 
   if (resizing.value) {
     leftPanelWidth.value =
       event.clientX -
-      (document.querySelector(".el-aside").offsetWidth + 1 + 8 / 2);
+      (document.querySelector<HTMLElement>(".el-aside")!.offsetWidth +
+        1 +
+        8 / 2);
   }
 };
 const stopResize = () => {
@@ -76,7 +78,7 @@ const stopResize = () => {
 
 onMounted(() => {
   leftPanelWidth.value =
-    document.querySelector(".split-container").offsetWidth / 2;
+    document.querySelector<HTMLElement>(".split-container")!.offsetWidth / 2;
 });
 </script>
 
