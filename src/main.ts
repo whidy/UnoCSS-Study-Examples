@@ -6,6 +6,7 @@ import "@unocss/reset/normalize.css";
 import "virtual:uno.css";
 import "element-plus/theme-chalk/dark/css-vars.css";
 import "@/style/index.scss";
+import "@/style/rainbow.css";
 import "@/style/github-markdown.css";
 import "@/style/prism.scss";
 import "uno:whidy.css";

@@ -58,7 +58,13 @@ onMounted(() => {
           sm:hidden
           sm:w-6
           @click="handleToggle()"></div>
-        <div m-0 truncate>UnoCSS技术分享代码演示和说明</div>
+        <div m-0 truncate>
+          <a
+            href="https://unocss.dev/"
+            rainbow-text
+            font-bold
+            decoration-none>【UnoCSS】</a>技术分享代码演示和说明（2023年08月07日完善中...）
+        </div>
       </div>
       <!-- <div>{{ prefersDark }}</div> -->
       <div class="w-1/6 flex justify-end">

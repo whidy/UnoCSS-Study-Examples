@@ -1,0 +1,666 @@
+@keyframes rainbow {
+  0% {
+    --rb-brand: #00a98e;
+    --rb-brand-light: #4ad1b4;
+    --rb-brand-lighter: #78fadc;
+    --rb-brand-dark: #008269;
+    --rb-brand-darker: #005d47;
+    --rb-brand-next: #009ff7;
+  }
+  1.25% {
+    --rb-brand: #00a996;
+    --rb-brand-light: #4bd1bd;
+    --rb-brand-lighter: #79fbe5;
+    --rb-brand-dark: #008371;
+    --rb-brand-darker: #005e4f;
+    --rb-brand-next: #009dfa;
+  }
+  2.5% {
+    --rb-brand: #00a99f;
+    --rb-brand-light: #4cd1c6;
+    --rb-brand-lighter: #7afbee;
+    --rb-brand-dark: #00837a;
+    --rb-brand-darker: #005e56;
+    --rb-brand-next: #009bfc;
+  }
+  3.75% {
+    --rb-brand: #00a9a7;
+    --rb-brand-light: #4dd1cf;
+    --rb-brand-lighter: #7bfbf8;
+    --rb-brand-dark: #008382;
+    --rb-brand-darker: #005e5e;
+    --rb-brand-next: #0098fd;
+  }
+  5% {
+    --rb-brand: #00a9b0;
+    --rb-brand-light: #4ed1d7;
+    --rb-brand-lighter: #7dfaff;
+    --rb-brand-dark: #00838a;
+    --rb-brand-darker: #005e65;
+    --rb-brand-next: #0096fd;
+  }
+  6.25% {
+    --rb-brand: #00a9b8;
+    --rb-brand-light: #4fd1e0;
+    --rb-brand-lighter: #7efaff;
+    --rb-brand-dark: #008391;
+    --rb-brand-darker: #005e6d;
+    --rb-brand-next: #0093fd;
+  }
+  7.5% {
+    --rb-brand: #00a9c0;
+    --rb-brand-light: #50d0e8;
+    --rb-brand-lighter: #7ffaff;
+    --rb-brand-dark: #008399;
+    --rb-brand-darker: #005e74;
+    --rb-brand-next: #2e90fc;
+  }
+  8.75% {
+    --rb-brand: #00a8c7;
+    --rb-brand-light: #51d0f0;
+    --rb-brand-lighter: #81f9ff;
+    --rb-brand-dark: #0082a0;
+    --rb-brand-darker: #005e7b;
+    --rb-brand-next: #4d8dfa;
+  }
+  10% {
+    --rb-brand: #00a8cf;
+    --rb-brand-light: #52cff7;
+    --rb-brand-lighter: #82f8ff;
+    --rb-brand-dark: #0082a7;
+    --rb-brand-darker: #005e81;
+    --rb-brand-next: #638af8;
+  }
+  11.25% {
+    --rb-brand: #00a7d5;
+    --rb-brand-light: #53cfff;
+    --rb-brand-lighter: #84f8ff;
+    --rb-brand-dark: #0081ae;
+    --rb-brand-darker: #005d87;
+    --rb-brand-next: #7587f5;
+  }
+  12.5% {
+    --rb-brand: #00a6dc;
+    --rb-brand-light: #55ceff;
+    --rb-brand-lighter: #85f7ff;
+    --rb-brand-dark: #0081b4;
+    --rb-brand-darker: #005d8d;
+    --rb-brand-next: #8583f1;
+  }
+  13.75% {
+    --rb-brand: #00a6e2;
+    --rb-brand-light: #56cdff;
+    --rb-brand-lighter: #87f6ff;
+    --rb-brand-dark: #0080b9;
+    --rb-brand-darker: #005c93;
+    --rb-brand-next: #9280ed;
+  }
+  15% {
+    --rb-brand: #00a4e7;
+    --rb-brand-light: #57ccff;
+    --rb-brand-lighter: #88f4ff;
+    --rb-brand-dark: #007fbf;
+    --rb-brand-darker: #005b98;
+    --rb-brand-next: #9f7ce9;
+  }
+  16.25% {
+    --rb-brand: #00a3ec;
+    --rb-brand-light: #58caff;
+    --rb-brand-lighter: #89f3ff;
+    --rb-brand-dark: #007ec3;
+    --rb-brand-darker: #005b9c;
+    --rb-brand-next: #aa78e3;
+  }
+  17.5% {
+    --rb-brand: #00a2f1;
+    --rb-brand-light: #58c9ff;
+    --rb-brand-lighter: #8af1ff;
+    --rb-brand-dark: #007dc8;
+    --rb-brand-darker: #0059a0;
+    --rb-brand-next: #b574dd;
+  }
+  18.75% {
+    --rb-brand: #00a0f4;
+    --rb-brand-light: #59c7ff;
+    --rb-brand-lighter: #8bf0ff;
+    --rb-brand-dark: #007bcb;
+    --rb-brand-darker: #0058a3;
+    --rb-brand-next: #be71d7;
+  }
+  20% {
+    --rb-brand: #009ff7;
+    --rb-brand-light: #5ac5ff;
+    --rb-brand-lighter: #8ceeff;
+    --rb-brand-dark: #007ace;
+    --rb-brand-darker: #0057a6;
+    --rb-brand-next: #c76dd1;
+  }
+  21.25% {
+    --rb-brand: #009dfa;
+    --rb-brand-light: #5ac3ff;
+    --rb-brand-lighter: #8decff;
+    --rb-brand-dark: #0078d0;
+    --rb-brand-darker: #0055a8;
+    --rb-brand-next: #cf69c9;
+  }
+  22.5% {
+    --rb-brand: #009bfc;
+    --rb-brand-light: #5bc1ff;
+    --rb-brand-lighter: #8de9ff;
+    --rb-brand-dark: #0076d2;
+    --rb-brand-darker: #0053aa;
+    --rb-brand-next: #d566c2;
+  }
+  23.75% {
+    --rb-brand: #0098fd;
+    --rb-brand-light: #5bbfff;
+    --rb-brand-lighter: #8ee7ff;
+    --rb-brand-dark: #0074d3;
+    --rb-brand-darker: #0051ab;
+    --rb-brand-next: #dc63ba;
+  }
+  25% {
+    --rb-brand: #0096fd;
+    --rb-brand-light: #5bbcff;
+    --rb-brand-lighter: #8ee4ff;
+    --rb-brand-dark: #0071d4;
+    --rb-brand-darker: #004fab;
+    --rb-brand-next: #e160b3;
+  }
+  26.25% {
+    --rb-brand: #0093fd;
+    --rb-brand-light: #5bb9ff;
+    --rb-brand-lighter: #8ee1ff;
+    --rb-brand-dark: #006fd3;
+    --rb-brand-darker: #004dab;
+    --rb-brand-next: #e65eab;
+  }
+  27.5% {
+    --rb-brand: #2e90fc;
+    --rb-brand-light: #69b6ff;
+    --rb-brand-lighter: #99deff;
+    --rb-brand-dark: #006cd2;
+    --rb-brand-darker: #004baa;
+    --rb-brand-next: #e95ca2;
+  }
+  28.75% {
+    --rb-brand: #4d8dfa;
+    --rb-brand-light: #7eb3ff;
+    --rb-brand-lighter: #abdbff;
+    --rb-brand-dark: #0069d1;
+    --rb-brand-darker: #0048a9;
+    --rb-brand-next: #ed5a9a;
+  }
+  30% {
+    --rb-brand: #638af8;
+    --rb-brand-light: #8fb0ff;
+    --rb-brand-lighter: #bbd7ff;
+    --rb-brand-dark: #3066cf;
+    --rb-brand-darker: #0045a7;
+    --rb-brand-next: #ef5992;
+  }
+  31.25% {
+    --rb-brand: #7587f5;
+    --rb-brand-light: #9fadff;
+    --rb-brand-lighter: #cad4ff;
+    --rb-brand-dark: #4963cc;
+    --rb-brand-darker: #0941a4;
+    --rb-brand-next: #f15989;
+  }
+  32.5% {
+    --rb-brand: #8583f1;
+    --rb-brand-light: #aea9ff;
+    --rb-brand-lighter: #d8d1ff;
+    --rb-brand-dark: #5b5fc8;
+    --rb-brand-darker: #2e3ea1;
+    --rb-brand-next: #f25981;
+  }
+  33.75% {
+    --rb-brand: #9280ed;
+    --rb-brand-light: #bca6ff;
+    --rb-brand-lighter: #e6cdff;
+    --rb-brand-dark: #6a5cc4;
+    --rb-brand-darker: #413a9d;
+    --rb-brand-next: #f25a79;
+  }
+  35% {
+    --rb-brand: #9f7ce9;
+    --rb-brand-light: #c8a2ff;
+    --rb-brand-lighter: #f2c9ff;
+    --rb-brand-dark: #7758c0;
+    --rb-brand-darker: #503598;
+    --rb-brand-next: #f25c71;
+  }
+  36.25% {
+    --rb-brand: #aa78e3;
+    --rb-brand-light: #d39eff;
+    --rb-brand-lighter: #fec6ff;
+    --rb-brand-dark: #8354bb;
+    --rb-brand-darker: #5c3193;
+    --rb-brand-next: #f15e69;
+  }
+  37.5% {
+    --rb-brand: #b574dd;
+    --rb-brand-light: #de9bff;
+    --rb-brand-lighter: #ffc2ff;
+    --rb-brand-dark: #8d50b5;
+    --rb-brand-darker: #662c8e;
+    --rb-brand-next: #ef6061;
+  }
+  38.75% {
+    --rb-brand: #be71d7;
+    --rb-brand-light: #e897ff;
+    --rb-brand-lighter: #ffbfff;
+    --rb-brand-dark: #964baf;
+    --rb-brand-darker: #6f2688;
+    --rb-brand-next: #ed635a;
+  }
+  40% {
+    --rb-brand: #c76dd1;
+    --rb-brand-light: #f194fa;
+    --rb-brand-lighter: #ffbcff;
+    --rb-brand-dark: #9e47a9;
+    --rb-brand-darker: #772082;
+    --rb-brand-next: #eb6552;
+  }
+  41.25% {
+    --rb-brand: #cf69c9;
+    --rb-brand-light: #f991f2;
+    --rb-brand-lighter: #ffb9ff;
+    --rb-brand-dark: #a643a2;
+    --rb-brand-darker: #7e197c;
+    --rb-brand-next: #e8694b;
+  }
+  42.5% {
+    --rb-brand: #d566c2;
+    --rb-brand-light: #ff8deb;
+    --rb-brand-lighter: #ffb6ff;
+    --rb-brand-dark: #ac3f9b;
+    --rb-brand-darker: #841075;
+    --rb-brand-next: #e46c44;
+  }
+  43.75% {
+    --rb-brand: #dc63ba;
+    --rb-brand-light: #ff8be3;
+    --rb-brand-lighter: #ffb3ff;
+    --rb-brand-dark: #b23b94;
+    --rb-brand-darker: #89046f;
+    --rb-brand-next: #e06f3d;
+  }
+  45% {
+    --rb-brand: #e160b3;
+    --rb-brand-light: #ff88db;
+    --rb-brand-lighter: #ffb1ff;
+    --rb-brand-dark: #b7378c;
+    --rb-brand-darker: #8d0068;
+    --rb-brand-next: #db7336;
+  }
+  46.25% {
+    --rb-brand: #e65eab;
+    --rb-brand-light: #ff86d2;
+    --rb-brand-lighter: #ffaffb;
+    --rb-brand-dark: #bb3485;
+    --rb-brand-darker: #910060;
+    --rb-brand-next: #d77630;
+  }
+  47.5% {
+    --rb-brand: #e95ca2;
+    --rb-brand-light: #ff84ca;
+    --rb-brand-lighter: #ffadf2;
+    --rb-brand-dark: #be317d;
+    --rb-brand-darker: #940059;
+    --rb-brand-next: #d17a2a;
+  }
+  48.75% {
+    --rb-brand: #ed5a9a;
+    --rb-brand-light: #ff83c1;
+    --rb-brand-lighter: #fface9;
+    --rb-brand-dark: #c12f75;
+    --rb-brand-darker: #970052;
+    --rb-brand-next: #cc7d24;
+  }
+  50% {
+    --rb-brand: #ef5992;
+    --rb-brand-light: #ff82b8;
+    --rb-brand-lighter: #ffabe0;
+    --rb-brand-dark: #c32d6d;
+    --rb-brand-darker: #98004b;
+    --rb-brand-next: #c6811e;
+  }
+  51.25% {
+    --rb-brand: #f15989;
+    --rb-brand-light: #ff82af;
+    --rb-brand-lighter: #ffabd7;
+    --rb-brand-dark: #c52d65;
+    --rb-brand-darker: #9a0043;
+    --rb-brand-next: #bf8418;
+  }
+  52.5% {
+    --rb-brand: #f25981;
+    --rb-brand-light: #ff82a7;
+    --rb-brand-lighter: #ffabce;
+    --rb-brand-dark: #c52e5e;
+    --rb-brand-darker: #9a003c;
+    --rb-brand-next: #b98713;
+  }
+  53.75% {
+    --rb-brand: #f25a79;
+    --rb-brand-light: #ff839e;
+    --rb-brand-lighter: #ffacc5;
+    --rb-brand-dark: #c62f56;
+    --rb-brand-darker: #9a0035;
+    --rb-brand-next: #b28a0f;
+  }
+  55% {
+    --rb-brand: #f25c71;
+    --rb-brand-light: #ff8496;
+    --rb-brand-lighter: #ffadbc;
+    --rb-brand-dark: #c5314e;
+    --rb-brand-darker: #99002e;
+    --rb-brand-next: #ab8d0c;
+  }
+  56.25% {
+    --rb-brand: #f15e69;
+    --rb-brand-light: #ff868d;
+    --rb-brand-lighter: #ffaeb4;
+    --rb-brand-dark: #c43447;
+    --rb-brand-darker: #980027;
+    --rb-brand-next: #a3900b;
+  }
+  57.5% {
+    --rb-brand: #ef6061;
+    --rb-brand-light: #ff8885;
+    --rb-brand-lighter: #ffb0ab;
+    --rb-brand-dark: #c3373f;
+    --rb-brand-darker: #970020;
+    --rb-brand-next: #9c920d;
+  }
+  58.75% {
+    --rb-brand: #ed635a;
+    --rb-brand-light: #ff8a7d;
+    --rb-brand-lighter: #ffb2a3;
+    --rb-brand-dark: #c13b38;
+    --rb-brand-darker: #940619;
+    --rb-brand-next: #949510;
+  }
+  60% {
+    --rb-brand: #eb6552;
+    --rb-brand-light: #ff8d76;
+    --rb-brand-lighter: #ffb59b;
+    --rb-brand-dark: #be3e31;
+    --rb-brand-darker: #921111;
+    --rb-brand-next: #8b9715;
+  }
+  61.25% {
+    --rb-brand: #e8694b;
+    --rb-brand-light: #ff8f6e;
+    --rb-brand-lighter: #ffb794;
+    --rb-brand-dark: #bb4229;
+    --rb-brand-darker: #8f1908;
+    --rb-brand-next: #83991b;
+  }
+  62.5% {
+    --rb-brand: #e46c44;
+    --rb-brand-light: #ff9367;
+    --rb-brand-lighter: #ffba8c;
+    --rb-brand-dark: #b74622;
+    --rb-brand-darker: #8c1f00;
+    --rb-brand-next: #7a9b21;
+  }
+  63.75% {
+    --rb-brand: #e06f3d;
+    --rb-brand-light: #ff9661;
+    --rb-brand-lighter: #ffbd86;
+    --rb-brand-dark: #b44a1a;
+    --rb-brand-darker: #882500;
+    --rb-brand-next: #719d27;
+  }
+  65% {
+    --rb-brand: #db7336;
+    --rb-brand-light: #ff995a;
+    --rb-brand-lighter: #ffc17f;
+    --rb-brand-dark: #af4e11;
+    --rb-brand-darker: #842a00;
+    --rb-brand-next: #679e2e;
+  }
+  66.25% {
+    --rb-brand: #d77630;
+    --rb-brand-light: #ff9c54;
+    --rb-brand-lighter: #ffc47a;
+    --rb-brand-dark: #ab5206;
+    --rb-brand-darker: #802f00;
+    --rb-brand-next: #5da035;
+  }
+  67.5% {
+    --rb-brand: #d17a2a;
+    --rb-brand-light: #fea04f;
+    --rb-brand-lighter: #ffc774;
+    --rb-brand-dark: #a55600;
+    --rb-brand-darker: #7b3300;
+    --rb-brand-next: #51a13c;
+  }
+  68.75% {
+    --rb-brand: #cc7d24;
+    --rb-brand-light: #f8a34a;
+    --rb-brand-lighter: #ffca70;
+    --rb-brand-dark: #a05900;
+    --rb-brand-darker: #773700;
+    --rb-brand-next: #44a244;
+  }
+  70% {
+    --rb-brand: #c6811e;
+    --rb-brand-light: #f2a646;
+    --rb-brand-lighter: #ffce6c;
+    --rb-brand-dark: #9b5d00;
+    --rb-brand-darker: #713b00;
+    --rb-brand-next: #34a44b;
+  }
+  71.25% {
+    --rb-brand: #bf8418;
+    --rb-brand-light: #ebaa42;
+    --rb-brand-lighter: #ffd168;
+    --rb-brand-dark: #956000;
+    --rb-brand-darker: #6c3e00;
+    --rb-brand-next: #1ba553;
+  }
+  72.5% {
+    --rb-brand: #b98713;
+    --rb-brand-light: #e4ad3f;
+    --rb-brand-lighter: #ffd466;
+    --rb-brand-dark: #8e6300;
+    --rb-brand-darker: #674100;
+    --rb-brand-next: #00a65b;
+  }
+  73.75% {
+    --rb-brand: #b28a0f;
+    --rb-brand-light: #ddb03d;
+    --rb-brand-lighter: #ffd764;
+    --rb-brand-dark: #886600;
+    --rb-brand-darker: #614400;
+    --rb-brand-next: #00a663;
+  }
+  75% {
+    --rb-brand: #ab8d0c;
+    --rb-brand-light: #d5b33c;
+    --rb-brand-lighter: #ffda63;
+    --rb-brand-dark: #816900;
+    --rb-brand-darker: #5b4700;
+    --rb-brand-next: #00a76c;
+  }
+  76.25% {
+    --rb-brand: #a3900b;
+    --rb-brand-light: #cdb63c;
+    --rb-brand-lighter: #f8dd63;
+    --rb-brand-dark: #7a6b00;
+    --rb-brand-darker: #554900;
+    --rb-brand-next: #00a874;
+  }
+  77.5% {
+    --rb-brand: #9c920d;
+    --rb-brand-light: #c5b83d;
+    --rb-brand-lighter: #f0e064;
+    --rb-brand-dark: #736e00;
+    --rb-brand-darker: #4e4b00;
+    --rb-brand-next: #00a87d;
+  }
+  78.75% {
+    --rb-brand: #949510;
+    --rb-brand-light: #bdbb3e;
+    --rb-brand-lighter: #e7e366;
+    --rb-brand-dark: #6c7000;
+    --rb-brand-darker: #474d00;
+    --rb-brand-next: #00a985;
+  }
+  80% {
+    --rb-brand: #8b9715;
+    --rb-brand-light: #b4bd41;
+    --rb-brand-lighter: #dee668;
+    --rb-brand-dark: #647200;
+    --rb-brand-darker: #404f00;
+    --rb-brand-next: #00a98e;
+  }
+  81.25% {
+    --rb-brand: #83991b;
+    --rb-brand-light: #abc045;
+    --rb-brand-lighter: #d4e86c;
+    --rb-brand-dark: #5c7400;
+    --rb-brand-darker: #385100;
+    --rb-brand-next: #00a996;
+  }
+  82.5% {
+    --rb-brand: #7a9b21;
+    --rb-brand-light: #a2c249;
+    --rb-brand-lighter: #cbea70;
+    --rb-brand-dark: #537600;
+    --rb-brand-darker: #2f5200;
+    --rb-brand-next: #00a99f;
+  }
+  83.75% {
+    --rb-brand: #719d27;
+    --rb-brand-light: #98c44e;
+    --rb-brand-lighter: #c1ec75;
+    --rb-brand-dark: #4a7700;
+    --rb-brand-darker: #255300;
+    --rb-brand-next: #00a9a7;
+  }
+  85% {
+    --rb-brand: #679e2e;
+    --rb-brand-light: #8ec654;
+    --rb-brand-lighter: #b7ee7a;
+    --rb-brand-dark: #407900;
+    --rb-brand-darker: #185500;
+    --rb-brand-next: #00a9b0;
+  }
+  86.25% {
+    --rb-brand: #5da035;
+    --rb-brand-light: #84c75a;
+    --rb-brand-lighter: #acf080;
+    --rb-brand-dark: #357a0a;
+    --rb-brand-darker: #015600;
+    --rb-brand-next: #00a9b8;
+  }
+  87.5% {
+    --rb-brand: #51a13c;
+    --rb-brand-light: #79c961;
+    --rb-brand-lighter: #a1f287;
+    --rb-brand-dark: #277b16;
+    --rb-brand-darker: #005700;
+    --rb-brand-next: #00a9c0;
+  }
+  88.75% {
+    --rb-brand: #44a244;
+    --rb-brand-light: #6dca68;
+    --rb-brand-lighter: #96f48e;
+    --rb-brand-dark: #117c1f;
+    --rb-brand-darker: #005700;
+    --rb-brand-next: #00a8c7;
+  }
+  90% {
+    --rb-brand: #34a44b;
+    --rb-brand-light: #60cc70;
+    --rb-brand-lighter: #89f595;
+    --rb-brand-dark: #007d28;
+    --rb-brand-darker: #005801;
+    --rb-brand-next: #00a8cf;
+  }
+  91.25% {
+    --rb-brand: #1ba553;
+    --rb-brand-light: #51cd77;
+    --rb-brand-lighter: #7cf69d;
+    --rb-brand-dark: #007e30;
+    --rb-brand-darker: #00590d;
+    --rb-brand-next: #00a7d5;
+  }
+  92.5% {
+    --rb-brand: #00a65b;
+    --rb-brand-light: #48ce80;
+    --rb-brand-lighter: #75f7a6;
+    --rb-brand-dark: #007f38;
+    --rb-brand-darker: #005917;
+    --rb-brand-next: #00a6dc;
+  }
+  93.75% {
+    --rb-brand: #00a663;
+    --rb-brand-light: #48cf88;
+    --rb-brand-lighter: #75f8ae;
+    --rb-brand-dark: #008040;
+    --rb-brand-darker: #005a20;
+    --rb-brand-next: #00a6e2;
+  }
+  95% {
+    --rb-brand: #00a76c;
+    --rb-brand-light: #49cf91;
+    --rb-brand-lighter: #76f9b7;
+    --rb-brand-dark: #008049;
+    --rb-brand-darker: #005b28;
+    --rb-brand-next: #00a4e7;
+  }
+  96.25% {
+    --rb-brand: #00a874;
+    --rb-brand-light: #49d099;
+    --rb-brand-lighter: #76f9c0;
+    --rb-brand-dark: #008151;
+    --rb-brand-darker: #005c30;
+    --rb-brand-next: #00a3ec;
+  }
+  97.5% {
+    --rb-brand: #00a87d;
+    --rb-brand-light: #49d0a2;
+    --rb-brand-lighter: #77fac9;
+    --rb-brand-dark: #008159;
+    --rb-brand-darker: #005c37;
+    --rb-brand-next: #00a2f1;
+  }
+  98.75% {
+    --rb-brand: #00a985;
+    --rb-brand-light: #4ad1ab;
+    --rb-brand-lighter: #77fad3;
+    --rb-brand-dark: #008261;
+    --rb-brand-darker: #005d3f;
+    --rb-brand-next: #00a0f4;
+  }
+  100% {
+    --rb-brand: #00a98e;
+    --rb-brand-light: #4ad1b4;
+    --rb-brand-lighter: #78fadc;
+    --rb-brand-dark: #008269;
+    --rb-brand-darker: #005d47;
+    --rb-brand-next: #009ff7;
+  }
+}
+
+:root {
+  --rb-brand: #00a98e;
+  --rb-brand-light: #4ad1b4;
+  --rb-brand-lighter: #78fadc;
+  --rb-brand-dark: #008269;
+  --rb-brand-darker: #005d47;
+  --rb-brand-next: #009ff7;
+  animation: rainbow 10s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    animation: none !important;
+  }
+}

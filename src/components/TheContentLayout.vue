@@ -1,5 +1,6 @@
 <template>
   <div
+    rainbow-content
     flex
     flex-col
     lg:flex-row
