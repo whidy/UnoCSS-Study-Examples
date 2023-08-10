@@ -4,7 +4,7 @@ import { toEscapedSelector as e } from "unocss";
 export const rules = [
   // 抄https://github.com/unocss/unocss/blob/main/docs/.vitepress/theme/rainbow.css
   [
-    /^rainbow-(.+)$/,
+    /^rainbow-(\w+)$/,
     ([, name], { rawSelector, currentSelector, variantHandlers, theme }) => {
       // console.log(name, rawSelector, currentSelector, variantHandlers);
       const selector = e(rawSelector);
@@ -17,7 +17,7 @@ ${selector} a {
       } else {
         return `
 ${selector} {
-  color: var(--rb-brand);
+  color: var(--rb-brand) !important;
 }
   `;
       }

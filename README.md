@@ -1,6 +1,6 @@
 # UnoCSS Study Examples
 
-> 当前资料对应的 UnoCSS 版本为 `0.51.x` ，其他版本请参见 `package.json` 。
+> 当前资料对应的 UnoCSS 版本为 `0.55.0` ，其他相关依赖版本请参见 `package.json` 。
 
 这是个人在研究学习 UnoCSS 过程中做的总结，也是作为公司内部培训分享用到的 PPT 相关演示，仅供学习参考。
 

@@ -1,8 +1,8 @@
 <template>
   <div
-    rainbow-content
     flex
     flex-col
+    rainbow-content
     lg:flex-row
     class="split-container">
     <el-scrollbar

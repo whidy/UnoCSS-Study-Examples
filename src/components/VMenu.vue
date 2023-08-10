@@ -67,4 +67,8 @@ const handleSelect = (index: string) => {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.is-active span {
+  color: var(--rb-brand);
+}
+</style>
