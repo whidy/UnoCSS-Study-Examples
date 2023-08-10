@@ -45,7 +45,8 @@ onMounted(() => {
       px-2
       text-base
       shadow
-      sm:px-4>
+      sm:px-4
+      dark:shadow-dark>
       <div
         w-full
         flex
