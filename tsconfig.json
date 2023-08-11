@@ -1,8 +1,8 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "types": ["vite/client", "element-plus/global", "unplugin-icons/types/vue"],
+    "types": ["vite/client", "element-plus/global.d.ts", "unplugin-icons/types/vue"],
     "paths": {
       "@/*": ["src/*"]
     },

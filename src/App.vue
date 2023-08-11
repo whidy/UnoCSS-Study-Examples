@@ -72,12 +72,14 @@ onMounted(() => {
         <el-link
           i-mdi-theme-light-dark
           w-5
+          text-8
           sm:w-6
           @click="toggleDark()" />
         <el-link
           i-mdi-github
           ml-3
           w-5
+          text-8
           sm:w-6
           href="https://github.com/whidy/UnoCSS-Study-Examples"
           target="_blank" />

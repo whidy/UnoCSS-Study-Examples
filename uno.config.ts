@@ -14,18 +14,22 @@ export default defineConfig({
     presetUno(),
     presetAttributify(),
     presetIcons({
-      // collections: {
-      //   carbon: () => import('@iconify-json/carbon/icons.json', {
-      //     assert: { type: 'json' }
-      //   }).then(i => i.default),
-      //   mdi: () => import('@iconify-json/mdi/icons.json', {
-      //     assert: { type: 'json' }
-      //   }).then(i => i.default),
-      // },
+      // 用于按需加载，参考：https://unocss.dev/presets/icons#bundler
+      collections: {
+        carbon: () => import("@iconify-json/carbon/icons.json", {
+          assert: { type: "json" }
+        }).then(i => i.default),
+        mdi: () => import("@iconify-json/mdi/icons.json", {
+          assert: { type: "json" }
+        }).then(i => i.default),
+        ep: () => import("@iconify-json/ep/icons.json", {
+          assert: { type: "json" }
+        }).then(i => i.default),
+      },
       customizations: {
         iconCustomizer(collection, icon, props) {
-          props.width = "2em";
-          props.height = "2em";
+          props.width = "1em";
+          props.height = "1em";
         },
         // customize(props) { // does not work
         //   props.width = '5.2em'
