@@ -6,12 +6,13 @@
   "author": "whidy",
   "scripts": {
     "dev": "vite",
-    "build": "pnpm run typecheck && vite build",
+    "build": "pnpm clean && pnpm typecheck && vite build",
     "typecheck": "vue-tsc --noEmit",
     "preview": "vite preview",
     "prettier": "prettier --config .prettierrc --write .",
     "lint": "eslint --ext .ts,vue --ignore-pattern '!.*ignore' .",
-    "lint:fix": "pnpm lint --fix && pnpm prettier && pnpm lint --fix"
+    "lint:fix": "pnpm lint --fix && pnpm prettier && pnpm lint --fix",
+    "clean": "rm -rf ./dist && rm -rf ./node_modules/.vite"
   },
   "dependencies": {
     "@vueuse/core": "^10.3.0",
