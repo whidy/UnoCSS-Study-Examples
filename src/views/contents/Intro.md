@@ -15,7 +15,7 @@
 - [**Shortcuts**](/#/Shortcuts) （自定缩写类）
 - [**Attributify Mode**](/#/Attributify) （属性模式）
 - [**Pure CSS Icons**](/#/CSSIcon) （CSS 图标）
-- [**Variant Groups**](/#/VariantGroups) （可变修饰组）
+- [**Variant Groups**](/#/VariantGroups) （组合缩写）
 - [**CSS Directives**](/#/CSSDirectives) （CSS 指令）
 - [**Compilation Mode**](/#/Compilation) （编译模式）
 - [**Inspector**](/#/Inspector) （调试模式）

@@ -17,7 +17,7 @@ const routes = [
   { path: "/Shortcuts", name: "Shortcuts", component: Shortcuts, meta: { icon: "i-carbon-asset", hoverIcon: "i-carbon-asset", topic: "简写模式", menuShow: true } },
   { path: "/Attributify", name: "Attributify", component: Attributify, meta: { icon: "i-carbon-code", hoverIcon: "i-carbon-code", topic: "属性化模式", menuShow: true } },
   { path: "/CSSIcon", name: "CSSIcon", component: CSSIcon, meta: { icon: "i-carbon-face-wink", hoverIcon: "i-carbon-face-satisfied", topic: "纯CSS图标", menuShow: true } },
-  { path: "/VariantGroups", name: "VariantGroups", component: VariantGroups, meta: { icon: "i-carbon-group-objects", hoverIcon: "i-carbon-group-objects", topic: "可变修饰分组", menuShow: true } },
+  { path: "/VariantGroups", name: "VariantGroups", component: VariantGroups, meta: { icon: "i-carbon-group-objects", hoverIcon: "i-carbon-group-objects", topic: "组合缩写", menuShow: true } },
   { path: "/CSSDirectives", name: "CSSDirectives", component: CSSDirectives, meta: { icon: "i-carbon-at", hoverIcon: "i-carbon-at", topic: "CSS指令", menuShow: true } },
   { path: "/Compilation", name: "Compilation", component: Compilation, meta: { icon: "i-carbon-tree-view-alt", hoverIcon: "i-carbon-tree-view-alt", topic: "编译模式", menuShow: true } },
   { path: "/Inspector", name: "Inspector", component: Inspector, meta: { icon: "i-carbon-inspection", hoverIcon: "i-carbon-inspection", topic: "调试模式", menuShow: true } },

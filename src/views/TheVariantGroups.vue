@@ -1,9 +1,8 @@
 <template>
-  <the-content-layout>
+  <the-content-layout :has-demo="false">
     <template #content>
       <markdownContent p-4 />
     </template>
-    <template #demo> </template>
   </the-content-layout>
 </template>
 
