@@ -8,12 +8,12 @@
 
 直接上图看效果吧，这个是 `http://localhost:3002/__unocss` 的：
 
-![__unocss](public/images/localhost_3002___unocss.png)
+![__unocss](/images/localhost_3002___unocss.png)
 
 ### __inspect
 
 下面这个是 `http://localhost:3002/__inspect/` 的：
 
-![__inspect](public/images/localhost_3002___inspect.png)
+![__inspect](/images/localhost_3002___inspect.png)
 
 `inspect` 的比较复杂你们自己研究吧。哈哈哈哈哈哈哈哈哈哈哈哈😄。

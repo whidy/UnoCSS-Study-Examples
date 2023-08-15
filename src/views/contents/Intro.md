@@ -19,7 +19,7 @@
 - [**CSS Directives**](/#/CSSDirectives) （CSS 指令）
 - [**Compilation Mode**](/#/Compilation) （编译模式）
 - [**Inspector**](/#/Inspector) （调试模式）
-- [**CDN Runtime Build**](/#/CDNRuntimeBuild) （CDN 运行时构建）
+- [**CDN Runtime Build**](https://unocss.dev/integrations/runtime) （CDN 运行时构建）
 
 如果熟悉 `bootstrap` 、 `Tailwind CSS` 或者 `Windi CSS` 的话，会发现 `UnoCSS` 上手十分容易。
 
