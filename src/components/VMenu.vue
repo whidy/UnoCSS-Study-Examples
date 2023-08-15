@@ -1,5 +1,4 @@
 <template>
-  <!-- "i-carbon-book group-hover:i-carbon-notebook-reference i-carbon-ibm-toolchain i-carbon-asset i-carbon-code i-carbon-face-wink group-hover:i-carbon-face-satisfied i-carbon-group-objects i-carbon-at i-carbon-tree-view-alt i-carbon-inspection i-carbon-face-dizzy-filled group-hover:i-carbon-user-favorite" -->
   <el-menu
     :default-active="activedItem"
     :class="menuType === 'drawer' && 'p-0'"
@@ -14,7 +13,7 @@
       :route="item">
       <i
         class="text-dark dark:text-white hover:text-cyan"
-        :class="item.icon + ' group-hover:' + item.hoverIcon"></i><span text-dark dark:text-white>{{ item.topic }}</span>
+        :class="`${item.icon} ${item.hoverIcon}`"></i><span text-dark dark:text-white>{{ item.topic }}</span>
     </el-menu-item>
   </el-menu>
 </template>
@@ -29,14 +28,6 @@ interface MenuItem {
   hoverIcon: string;
   topic: string;
   menuShow: false;
-}
-
-interface RefItemOfMenu {
-  $el: HTMLElement;
-  route: {
-    icon: string;
-    hoverIcon: string;
-  };
 }
 
 const routeName = router.currentRoute.value.name as string;
