@@ -64,7 +64,7 @@ onMounted(() => {
             href="https://unocss.dev/"
             font-bold
             decoration-none
-            rainbow-text>【UnoCSS】</a>技术分享代码演示和说明（2023年08月07日完善中...）
+            rainbow-text>【UnoCSS】</a>技术分享代码演示和说明
         </div>
       </div>
       <!-- <div>{{ prefersDark }}</div> -->

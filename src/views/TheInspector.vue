@@ -1,5 +1,5 @@
 <template>
-  <the-content-layout>
+  <the-content-layout :has-demo="false">
     <template #content>
       <markdownContent p-4 />
     </template>

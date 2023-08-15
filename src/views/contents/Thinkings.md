@@ -68,3 +68,27 @@
 这个是有坑的，开发环境下，在 `rules` 内使用 `@apply` ，无论是开发环境还是生产环境，都无效，但是如果改写成 `--at-apply` 的写法，在开发模式下居然有用。但是在官方的 `Playground` 和 `生产环境` 是无效的，这个需要注意。
 
 _...其他的还有发现的再陆陆续续补充。_
+
+### 使用层面
+
+其实如我介绍部分所说，如果之前接触过TailwindCSS或者WindiCSS，哪怕是Bootstrap，都能够快速掌握UnoCSS的使用。
+
+当然，本来起初UnoCSS基本是兼容了这些CSS框架，但是这么多CSS框架也在不断优化，改变，UnoCSS当然不可能完全兼容，否则只会越来越臃肿。
+
+我在完成这个项目的时候，也遇到过一个问题，关于[@apply内的!important的写法](https://github.com/unocss/unocss/issues/2982)问题。按照TailwindCSS的写法，在UnoCSS内无法实现，我以为兼容是有必要的，不过，他们做了回复和解释：
+
+```
+zyyv:
+I think we should focus on writing the atomic utility(with some variants), try to avoid mixing with traditional css.
+```
+
+我想UnoCSS未来的发展确实应该更专注与原子化工具和变种写法。
+
+### 最后
+
+本项目仅适用于UnoCSS的入门和了解。关于更多更复杂的内容，看看后面有没有空进一步研究分享，主要包含：
+
+* Presets
+* Transformers
+* Extractors
+* ...
