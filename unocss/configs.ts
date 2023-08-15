@@ -44,7 +44,7 @@ ${selector} {
 ${selector} {
 position: relative;
 cursor: pointer;
-@apply border-l-2 pl-2 b-pink-2 mb-4;
+--at-apply: b-l-solid border-l-2 b-pink-2 pl-2 mb-4; /* 无用！ */
 }
 ${selector}::after {
 content: "${name.concat("~").repeat(Number(count))}";

@@ -10,8 +10,7 @@
 
 ```js
 // uno.config.ts
-import { defineConfig } from "unocss";
-import { presetIcons } from "@unocss";
+import { defineConfig， presetIcons } from "unocss";
 
 export default defineConfig({
   presets: [
@@ -28,7 +27,7 @@ export default defineConfig({
 假设你现在要用 `Carbon` ，那么对应的图集链接是：<https://icones.js.org/collection/carbon>。那么请安装依赖（这里以pnpm示例）：
 
 ```
-pnpm add -D @unocss/preset-icons @iconify-json/carbon
+pnpm add -D @iconify-json/carbon
 ```
 
 接下来就可以在项目中使用了，比如：

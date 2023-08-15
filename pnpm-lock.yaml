@@ -46,9 +46,6 @@ devDependencies:
   '@unocss/eslint-config':
     specifier: ^0.55.0
     version: 0.55.0(eslint@8.46.0)(typescript@5.1.6)
-  '@unocss/preset-icons':
-    specifier: ^0.55.0
-    version: 0.55.0
   '@unocss/reset':
     specifier: ^0.55.0
     version: 0.55.0

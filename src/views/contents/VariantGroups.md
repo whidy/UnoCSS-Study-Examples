@@ -10,8 +10,7 @@
 
 ```js
 // uno.config.ts
-import { defineConfig } from "unocss";
-import transformerVariantGroup from "@unocss/transformer-variant-group";
+import { defineConfig, transformerVariantGroup } from "unocss";
 
 export default defineConfig({
   // ...
@@ -22,13 +21,13 @@ export default defineConfig({
 接着代码就可以直接用了。
 
 ```html
-<div class="hover:(bg-gray-400 font-medium) font-(light mono)" />
+<div class="hover:(bg-gray-400 font-medium) font-(light mono)"></div>
 ```
 
 将被转换成
 
 ```html
-<div class="hover:bg-gray-400 hover:font-medium font-light font-mono" />
+<div class="hover:bg-gray-400 hover:font-medium font-light font-mono"></div>
 ```
 
 其实我更期待，有工具能自动将 `xxx:a xxx:b xxx:c` 转换成 `xxx:(a b c)` ，这样代码看起来确实会简洁许多，而且也更清晰了。

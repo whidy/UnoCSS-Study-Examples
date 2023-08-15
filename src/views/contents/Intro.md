@@ -11,8 +11,8 @@
 - [**Fully Customizable**](/#/Customizable) （高度灵活）
 - **Instant** （即时性）
 - **Lightweight** （轻量）
-- [**Rich Integrations**](/#/RichIntegrations) （多项目集成）
-- [**Shortcuts**](/#/Shortcuts) （自定缩写类）
+- [**Rich Integrations**](https://unocss.dev/integrations/vite) （多项目集成）
+- [**Shortcuts**](/#/Shortcuts) （简写模式）
 - [**Attributify Mode**](/#/Attributify) （属性模式）
 - [**Pure CSS Icons**](/#/CSSIcon) （CSS 图标）
 - [**Variant Groups**](/#/VariantGroups) （组合缩写）

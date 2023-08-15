@@ -4,6 +4,22 @@
 
 这个预设是内置的，所以按照文档[Attributify preset](https://unocss.dev/presets/attributify)，在配置文件中添加即可。
 
+首先依照惯例，UnoCSS配置一下：
+
+```js
+// uno.config.ts
+import { defineConfig, presetAttributify } from "unocss";
+
+export default defineConfig({
+  presets: [
+    presetAttributify({
+      /* preset options */
+    }),
+    // ...
+  ],
+});
+```
+
 先举一个简单的例子：
 
 ```html

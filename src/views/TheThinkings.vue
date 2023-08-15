@@ -1,5 +1,5 @@
 <template>
-  <the-content-layout>
+  <the-content-layout :has-demo="false">
     <template #content>
       <markdownContent p-4 />
     </template>
@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import markdownContent from "./contents/Attributify.md";
+import markdownContent from "./contents/Thinkings.md";
 </script>
 
 <style scoped></style>
