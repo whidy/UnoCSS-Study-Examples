@@ -8,12 +8,15 @@
     <el-menu-item
       v-for="item in menu"
       :key="item.name"
-      class="group flex items-center text-sm decoration-none space-x-2"
+      class="group flex items-center text-sm decoration-none space-x-2 [&.is-active_i]:text-[--rb-brand] [&.is-active_span]:text-[--rb-brand] [&.is-active]:text-[--rb-brand]"
+      :class="item.isActiveIcon"
       :index="item.name"
       :route="item">
       <i
-        class="text-dark dark:text-white hover:text-cyan"
-        :class="`${item.icon} ${item.hoverIcon}`"></i><span text-dark dark:text-white>{{ item.topic }}</span>
+        class="text-dark dark:text-white group-hover:text-[--rb-brand]"
+        :class="`${item.icon} ${item.groupHoverIcon}`"></i><span class="text-dark dark:text-white group-hover:text-[--rb-brand]">{{
+          item.topic
+        }}</span>
     </el-menu-item>
   </el-menu>
 </template>
@@ -25,7 +28,8 @@ interface MenuItem {
   name: string;
   path: string;
   icon: string;
-  hoverIcon: string;
+  groupHoverIcon: string;
+  isActiveIcon: string;
   topic: string;
   menuShow: false;
 }
@@ -66,13 +70,12 @@ const handleSelect = (index: string) => {
   }
   router.push(`/${index}`);
 };
-
 </script>
 
 <style scoped>
-.is-active,
+/* .is-active,
 .is-active span,
 .is-active i {
   color: var(--rb-brand);
-}
+} */
 </style>
