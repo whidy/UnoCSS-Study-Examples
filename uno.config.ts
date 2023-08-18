@@ -7,6 +7,7 @@ import {
   defineConfig,
 } from "unocss";
 import { rules, shortcuts } from "./unocss/configs";
+import { hoverIconList } from "./src/utils/inlineClasses";
 export default defineConfig({
   rules,
   shortcuts,
@@ -41,12 +42,15 @@ export default defineConfig({
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],
   content: {
+    inline: [
+      () => hoverIconList.map(item => `${item} group-hover:${item} [&.is-active_i]:${item}`).join(" ")
+    ],
     pipeline: {
       include: [
-        // the default
-        /\.(vue|svelte|[jt]sx|mdx?|astro|elm|php|phtml|html)($|\?)/,
+        // 我把md移除了
+        /\.(vue|svelte|[jt]sx|astro|elm|php|phtml|html)($|\?)/,
         // 这里只写我需要的，当然你也可以定制，参考：https://unocss.dev/guide/extracting#extracting-from-build-tools-pipeline
-        "src/router/index.ts",
+        // "src/router/index.ts",
       ],
       // exclude files
       // exclude: []

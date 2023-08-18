@@ -76,7 +76,7 @@ export default defineConfig({
 * 在模板中使用的时候不能用 `:class="item.icon + ' group-hover:' + item.hoverIcon"></i>` 这种拼接而成的 `group-hover`。
 * 其次因为存在hover，所以根据上条规则你可以看到路由文件中这样写 `hoverIcon: "group-hover:i-carbon-user-favorite"` 。
 
-而关于之前担心的从服务端或异步方式获取的icon，如何实现，没想到也有了（当然我并没有测试，应该是可行的），参考：[Extracting from Inline Text](https://unocss.dev/guide/extracting#extracting-from-inline-text)的示例：
+而关于之前担心的从服务端或异步方式获取的icon，如何实现，没想到也有了（~~当然我并没有测试，应该是可行的~~），参考：[Extracting from Inline Text](https://unocss.dev/guide/extracting#extracting-from-inline-text)的示例：
 
 ```js
 // uno.config.ts
@@ -94,6 +94,8 @@ export default defineConfig({
   }
 })
 ```
+
+> 2023年08月18日：在本项目中，我也尝试了inline中生成，非常好用。
 
 其中的异步操作必然会阻塞构建，所以要合理使用，其次，如果说后端返回的路由没有以上面提到的 `group-hover:i-carbon-user-favorite` 格式，而是直接给了 `i-carbon-user-favorite` ，那么我们同样可以在回调中进行处理，拼接成项目中所需要的，那么，关于动态icon的完美解决方案，最后还是由官方提供好了。
 

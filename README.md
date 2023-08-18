@@ -32,5 +32,7 @@
 
 ### 2023年08月18日
 
-* 解决了左侧菜单，点击后，高亮下样式与`group-hover` 一致。你可以看到本项目的左侧菜单来进行演示。也可看这个[UnoCSS Demo - actived](https://codesandbox.io/p/sandbox/unocss-demo-actived-xvst5l)
-* 有位群友帮助我，在我询问很多种写法的文档，如何快速掌握的时候，给出了这个[各种写法的提问](https://discord.com/channels/937808017016119440/937812695623794799/1141970584062922755)，访问不了的话，直接看答案吧：[**很多写法是tailwind的，这里应该是比较全的**](https://github.com/unocss/unocss/blob/main/test/assets/preset-mini-targets.ts)。我看了下确实非常强大，强烈推荐。
+- 解决了左侧菜单，点击后，高亮下样式与`group-hover` 一致。你可以看到本项目的左侧菜单来进行演示。也可看这个[UnoCSS Demo - actived](https://codesandbox.io/p/sandbox/unocss-demo-actived-xvst5l)
+- 有位群友帮助我，在我询问很多种写法的文档，如何快速掌握的时候，给出了这个[各种写法的提问](https://discord.com/channels/937808017016119440/937812695623794799/1141970584062922755)，访问不了的话，直接看答案吧：[**很多写法是tailwind的，这里应该是比较全的**](https://github.com/unocss/unocss/blob/main/test/assets/preset-mini-targets.ts)。我看了下确实非常强大，强烈推荐。
+
+这次提交，将之前的路由中预设了所有场景的符合UnoCSS规则的样式类名移除了，需要看的，可以回到`d337419`记录上。另外在UnoCSS的配置中的 `content` 进行了调整，移除了解析md的类名，因为我这里用md来写教程，会自动转换。其次添加了inline，用于测试动态类名加载。
