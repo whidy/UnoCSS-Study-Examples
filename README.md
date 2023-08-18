@@ -32,4 +32,5 @@
 
 ### 2023年08月18日
 
-解决了左侧菜单，点击后，高亮下样式与`group-hover` 一致。你可以看到本项目的左侧菜单来进行演示。也可看这个[UnoCSS Demo - actived](https://codesandbox.io/p/sandbox/unocss-demo-actived-xvst5l)
+* 解决了左侧菜单，点击后，高亮下样式与`group-hover` 一致。你可以看到本项目的左侧菜单来进行演示。也可看这个[UnoCSS Demo - actived](https://codesandbox.io/p/sandbox/unocss-demo-actived-xvst5l)
+* 有位群友帮助我，在我询问很多种写法的文档，如何快速掌握的时候，给出了这个[各种写法的提问](https://discord.com/channels/937808017016119440/937812695623794799/1141970584062922755)，访问不了的话，直接看答案吧：[**很多写法是tailwind的，这里应该是比较全的**](https://github.com/unocss/unocss/blob/main/test/assets/preset-mini-targets.ts)。我看了下确实非常强大，强烈推荐。

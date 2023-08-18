@@ -8,13 +8,13 @@
     <el-menu-item
       v-for="item in menu"
       :key="item.name"
-      class="group flex items-center text-sm decoration-none space-x-2 [&.is-active_i]:text-[--rb-brand] [&.is-active_span]:text-[--rb-brand] [&.is-active]:text-[--rb-brand]"
+      class="group flex items-center text-sm decoration-none space-x-2 [&.is-active_i]:text-$rb-brand [&.is-active_span]:text-$rb-brand [&.is-active]:text-$rb-brand"
       :class="item.isActiveIcon"
       :index="item.name"
       :route="item">
       <i
-        class="text-dark dark:text-white group-hover:text-[--rb-brand]"
-        :class="`${item.icon} ${item.groupHoverIcon}`"></i><span class="text-dark dark:text-white group-hover:text-[--rb-brand]">{{
+        class="text-dark dark:text-white group-hover:text-$rb-brand"
+        :class="`${item.icon} ${item.groupHoverIcon}`"></i><span class="text-dark dark:text-white group-hover:text-$rb-brand">{{
           item.topic
         }}</span>
     </el-menu-item>
