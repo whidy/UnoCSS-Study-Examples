@@ -7,7 +7,7 @@ import {
   defineConfig,
 } from "unocss";
 import { rules, shortcuts } from "./unocss/configs";
-import { hoverIconList } from "./src/utils/inlineClasses";
+import { iconList, hoverIconList } from "./src/utils/inlineClasses";
 export default defineConfig({
   rules,
   shortcuts,
@@ -43,7 +43,12 @@ export default defineConfig({
   transformers: [transformerDirectives(), transformerVariantGroup()],
   content: {
     inline: [
-      () => hoverIconList.map(item => `${item} group-hover:${item} [&.is-active_i]:${item}`).join(" ")
+      // for icons
+      () => {
+        const hoverIconStr = hoverIconList.map(item => `${item} group-hover:${item} [&.is-active_i]:${item}`).join(" ");
+        const iconStr = iconList.join(" ");
+        return hoverIconStr + " " + iconStr;
+      }
     ],
     pipeline: {
       include: [
