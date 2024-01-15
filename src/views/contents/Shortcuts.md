@@ -29,15 +29,17 @@ shortcuts: [{
 假设页面中仅编写的 `html` 使用了 `gradient-teal-blue` ，那么只有该类编译为：
 
 ```css
-[gradient-teal-blue=''] {
+[gradient-teal-blue=""] {
   --un-gradient-from-position: 0%;
-  --un-gradient-from: rgba(45, 212, 191, var(--un-from-opacity, 1))
-    var(--un-gradient-from-position);
+  --un-gradient-from: rgba(45, 212, 191, var(--un-from-opacity, 1)) var(
+      --un-gradient-from-position
+    );
   --un-gradient-to-position: 100%;
   --un-gradient-to: rgba(45, 212, 191, 0) var(--un-gradient-to-position);
   --un-gradient-stops: var(--un-gradient-from), var(--un-gradient-to);
-  --un-gradient-to: rgba(59, 130, 246, var(--un-to-opacity, 1))
-    var(--un-gradient-to-position);
+  --un-gradient-to: rgba(59, 130, 246, var(--un-to-opacity, 1)) var(
+      --un-gradient-to-position
+    );
   --un-gradient-shape: to right;
   --un-gradient: var(--un-gradient-shape), var(--un-gradient-stops);
   background-image: linear-gradient(var(--un-gradient));

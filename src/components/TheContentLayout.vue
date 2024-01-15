@@ -7,28 +7,29 @@
     class="split-container">
     <el-scrollbar
       z-1
-      class="left-panel"
-      :style="{ width: hasDemo ? leftPanelWidth + 'px' : '100%' }">
+      min-w="360px"
+      :style="initDimensions"
+      @mousedown.prevent="startResize($event)">
+      <!-- {{ hasDemo }}, {{ resizing }}, {{ mainPanel }}, {{ domWidth }} -->
       <slot name="content"> 内容部分 </slot>
     </el-scrollbar>
     <template v-if="hasDemo">
       <div
-        w-2
-        cursor-ew-resize
+        h-2
+        cursor-ns-resize
         bg-slate-100
+        lg:h-full
+        lg:w-2
+        lg:cursor-ew-resize
         dark:bg-black
         hover:bg-slate-200
         hover:dark:bg-gray-900
         @mousedown="startResize"></div>
       <el-scrollbar
-        class="right-panel"
-        h-64
+        lg="h-full min-w-96"
+        flex-1
         bg-gray-600
-        lg:w-sm
-        sm:h-auto
-        sm:flex-1
-        xl:flex-1
-        lg:flex-initial>
+        min-h="360px">
         <div p-4 lg:h-full>
           <slot name="demo">
             <el-card>
@@ -43,6 +44,17 @@
 </template>
 
 <script setup lang="ts">
+import { defineStore } from "pinia";
+
+const useStore = defineStore("config", {
+  state: () => {
+    return {
+      domWidth: 0,
+      mainPanelDimensions: 0,
+    };
+  },
+});
+const store = useStore();
 const props = defineProps({
   hasDemo: {
     type: Boolean,
@@ -51,10 +63,16 @@ const props = defineProps({
 });
 const hasDemo = props.hasDemo === undefined ? true : props.hasDemo;
 
+const domWidth = ref(window.innerWidth);
 const resizing = ref(false);
-const leftPanelWidth = ref(0);
-
-const startResize = () => {
+const mainPanelDimensions = ref(0);
+const initDimensions = computed(() => {
+  if (!hasDemo) return "width: 100%";
+  return `${domWidth.value < 1024 ? "height" : "width"}: ${mainPanelDimensions.value}px`;
+});
+const startResize = (event: MouseEvent) => {
+  event.preventDefault();
+  event.stopPropagation();
   resizing.value = true;
 
   document.addEventListener("mousemove", handleResize);
@@ -62,24 +80,45 @@ const startResize = () => {
 };
 const handleResize = (event: MouseEvent) => {
   if (resizing.value) {
-    leftPanelWidth.value =
-      event.clientX -
-      (document.querySelector<HTMLElement>(".el-aside")!.offsetWidth +
-        1 +
-        8 / 2);
+    if (domWidth.value < 1024) {
+      // lg
+      mainPanelDimensions.value =
+        event.clientY -
+        document.querySelector<HTMLElement>(".el-header")!.offsetHeight;
+    } else {
+      mainPanelDimensions.value =
+        event.clientX -
+        (document.querySelector<HTMLElement>(".el-aside")!.offsetWidth +
+          1 +
+          8 / 2); // sidebar width + border width + handlerbar width
+    }
+    store.mainPanelDimensions = mainPanelDimensions.value;
   }
 };
 const stopResize = () => {
   resizing.value = false;
-
-  // 移除鼠标移动和释放事件的绑定
   document.removeEventListener("mousemove", handleResize);
   document.removeEventListener("mouseup", stopResize);
 };
 
+const updateDomWidth = () => {
+  domWidth.value = window.innerWidth;
+};
+
 onMounted(() => {
-  leftPanelWidth.value =
-    document.querySelector<HTMLElement>(".split-container")!.offsetWidth / 2;
+  window.addEventListener("resize", updateDomWidth);
+  nextTick(() => {
+    if (store.mainPanelDimensions > 0) {
+      mainPanelDimensions.value = store.mainPanelDimensions;
+      return;
+    }
+    mainPanelDimensions.value =
+      document.querySelector<HTMLElement>(".split-container")!.offsetWidth / 2;
+  });
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", updateDomWidth);
 });
 </script>
 

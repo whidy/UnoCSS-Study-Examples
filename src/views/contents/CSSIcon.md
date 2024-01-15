@@ -73,8 +73,8 @@ export default defineConfig({
 
 当然这里仍然有几个需要注意的地方，详细说明，我在 `src/router/index.ts` 有简单介绍，这里再说一次。
 
-* 在模板中使用的时候不能用 `:class="item.icon + ' group-hover:' + item.hoverIcon"></i>` 这种拼接而成的 `group-hover`。
-* 其次因为存在hover，所以根据上条规则你可以看到路由文件中这样写 `hoverIcon: "group-hover:i-carbon-user-favorite"` 。
+- 在模板中使用的时候不能用 `:class="item.icon + ' group-hover:' + item.hoverIcon"></i>` 这种拼接而成的 `group-hover`。
+- 其次因为存在hover，所以根据上条规则你可以看到路由文件中这样写 `hoverIcon: "group-hover:i-carbon-user-favorite"` 。
 
 而关于之前担心的从服务端或异步方式获取的icon，如何实现，没想到也有了（~~当然我并没有测试，应该是可行的~~），参考：[Extracting from Inline Text](https://unocss.dev/guide/extracting#extracting-from-inline-text)的示例：
 
@@ -87,12 +87,12 @@ export default defineConfig({
       '<div class="p-4 text-red">Some text</div>',
       // async getter
       async () => {
-        const response = await fetch('https://example.com')
-        return response.text()
-      }
-    ]
-  }
-})
+        const response = await fetch("https://example.com");
+        return response.text();
+      },
+    ],
+  },
+});
 ```
 
 > 2023年08月18日：在本项目中，我也尝试了inline中生成，非常好用。

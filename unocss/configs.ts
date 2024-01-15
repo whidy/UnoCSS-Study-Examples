@@ -34,7 +34,7 @@ ${selector} {
       }: {
         rawSelector: string;
         theme: any;
-      }
+      },
     ) => {
       const selector = e(rawSelector);
       // console.log(theme);

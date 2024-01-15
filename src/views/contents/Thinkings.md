@@ -88,7 +88,7 @@ I think we should focus on writing the atomic utility(with some variants), try t
 
 本项目仅适用于UnoCSS的入门和了解。关于更多更复杂的内容，看看后面有没有空进一步研究分享，主要包含：
 
-* Presets
-* Transformers
-* Extractors
-* ...
+- Presets
+- Transformers
+- Extractors
+- ...

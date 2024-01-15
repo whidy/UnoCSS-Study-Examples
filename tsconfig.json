@@ -2,12 +2,20 @@
   "extends": "@vue/tsconfig/tsconfig.dom.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "types": ["vite/client", "element-plus/global.d.ts", "unplugin-icons/types/vue"],
+    "types": [
+      "vite/client",
+      "element-plus/global.d.ts",
+      "unplugin-icons/types/vue"
+    ],
     "paths": {
       "@/*": ["src/*"]
     },
     "skipLibCheck": true
   },
   "include": ["src", "unocss"],
-  "references": [{ "path": "./tsconfig.vite-config.json" }]
+  "references": [
+    {
+      "path": "./tsconfig.vite-config.json"
+    }
+  ]
 }

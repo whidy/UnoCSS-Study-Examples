@@ -1,5 +1,5 @@
 <template>
-  <!-- i-carbon-3d-print-mesh i-carbon-product i-carbon-bat i-carbon-router -->
+  <!-- 这个是为了构建时能识别到的icon数据 i-carbon-3d-print-mesh i-carbon-product i-carbon-bat i-carbon-router -->
   <the-content-layout>
     <template #content>
       <markdownContent p-4 />
@@ -39,7 +39,7 @@
 
 <script setup lang="ts">
 import markdownContent from "./contents/CSSIcon.md";
-
+// 如果没有顶部的预加载的固定icon，下面这些都没用。
 // default icon cannot load
 const iconNameRef = ref("3d-print-mesh");
 let iconName = "i-carbon-" + "product";

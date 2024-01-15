@@ -17,15 +17,18 @@ export default defineConfig({
     presetIcons({
       // 用于按需加载，参考：https://unocss.dev/presets/icons#bundler
       collections: {
-        carbon: () => import("@iconify-json/carbon/icons.json", {
-          assert: { type: "json" }
-        }).then(i => i.default),
-        mdi: () => import("@iconify-json/mdi/icons.json", {
-          assert: { type: "json" }
-        }).then(i => i.default),
-        ep: () => import("@iconify-json/ep/icons.json", {
-          assert: { type: "json" }
-        }).then(i => i.default),
+        carbon: () =>
+          import("@iconify-json/carbon/icons.json", {
+            assert: { type: "json" },
+          }).then((i) => i.default),
+        mdi: () =>
+          import("@iconify-json/mdi/icons.json", {
+            assert: { type: "json" },
+          }).then((i) => i.default),
+        ep: () =>
+          import("@iconify-json/ep/icons.json", {
+            assert: { type: "json" },
+          }).then((i) => i.default),
       },
       customizations: {
         iconCustomizer(collection, icon, props) {
@@ -45,10 +48,12 @@ export default defineConfig({
     inline: [
       // for icons
       () => {
-        const hoverIconStr = hoverIconList.map(item => `${item} group-hover:${item} [&.is-active_i]:${item}`).join(" ");
+        const hoverIconStr = hoverIconList
+          .map((item) => `${item} group-hover:${item} [&.is-active_i]:${item}`)
+          .join(" ");
         const iconStr = iconList.join(" ");
         return hoverIconStr + " " + iconStr;
-      }
+      },
     ],
     pipeline: {
       include: [
@@ -59,6 +64,6 @@ export default defineConfig({
       ],
       // exclude files
       // exclude: []
-    }
-  }
+    },
+  },
 });

@@ -11,9 +11,13 @@
           :key="index"
           class="list-none pl-0">
           <!-- #1 don't use this -->
-          <!-- <li>{{ index + 1 }}. <span :class="comp(index)">I Love Whidy</span></li> -->
+          <li class="flex items-center">
+            <i class="mr-2" :class="`i-mdi-numeric-${rankIcon[index]}-box`"></i>
+            <!-- 你在页面上虽然看到颜色了但是实际是障眼法。 -->
+            <span :class="comp(index)">I Love {{ rankPeople[index] }}</span>
+          </li>
           <!-- use this -->
-          <li>
+          <li class="mt-2">
             {{ index + 1 }}.
             <span :class="rankTextColorList[index]">{{ name }}</span>
           </li>
@@ -29,6 +33,8 @@ import markdownContent from "./contents/Thinkings.md";
 const comp = (index: number) => `text-red-${index + 1}00`;
 // #2 use this
 const rankPeople = ["Whidy", "Tom", "Lucy", "Teddy", "Somebody"];
+const rankIcon = ["1", "2", "3", "4", "5"];
+
 const rankTextColorList = [
   "text-red-500",
   "text-red-400",

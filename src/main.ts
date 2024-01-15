@@ -1,4 +1,5 @@
 import { createApp } from "vue";
+import { createPinia } from "pinia";
 import { router } from "@/router";
 import LogRocket from "logrocket";
 import App from "./App.vue";
@@ -11,7 +12,10 @@ import "@/style/github-markdown.css";
 import "@/style/prism.scss";
 import "uno:whidy.css";
 import "virtual:unocss-devtools";
+
 LogRocket.init("4hsopa/unocss");
+const pinia = createPinia();
 const app = createApp(App);
+app.use(pinia);
 app.use(router);
 app.mount("#app");

@@ -4,13 +4,13 @@
 
 这块没啥好说的。但是不要弄混了一件事情，以本项目为例，那就是不要把 `http://localhost:3002/__unocss` 和 `http://localhost:3002/__inspect/` 搞混了。
 
-### __unocss
+### \_\_unocss
 
 直接上图看效果吧，这个是 `http://localhost:3002/__unocss` 的：
 
 ![__unocss](/images/localhost_3002___unocss.png)
 
-### __inspect
+### \_\_inspect
 
 下面这个是 `http://localhost:3002/__inspect/` 的：
 
