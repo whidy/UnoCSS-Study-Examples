@@ -5,16 +5,13 @@
     rainbow-content
     lg:flex-row
     class="split-container">
-    <el-scrollbar
-      z-1
-      min-w="360px"
-      :style="initDimensions"
-      @mousedown.prevent="startResize($event)">
-      <!-- {{ hasDemo }}, {{ resizing }}, {{ mainPanel }}, {{ domWidth }} -->
+    <el-scrollbar z-1 min-w="360px" :style="initDimensions">
+      <!-- {{ hasDemo }}, {{ resizing }}, {{ mainPanelDimensions }}, {{ domWidth }} -->
       <slot name="content"> 内容部分 </slot>
     </el-scrollbar>
     <template v-if="hasDemo">
       <div
+        ref="handlerbar"
         h-2
         cursor-ns-resize
         bg-slate-100
@@ -61,6 +58,8 @@ const props = defineProps({
     default: true,
   },
 });
+
+const handlerbar = ref<null | HTMLElement>(null);
 const hasDemo = props.hasDemo === undefined ? true : props.hasDemo;
 
 const domWidth = ref(window.innerWidth);
@@ -73,6 +72,9 @@ const initDimensions = computed(() => {
 const startResize = (event: MouseEvent) => {
   event.preventDefault();
   event.stopPropagation();
+  if (event.target !== handlerbar.value) {
+    return;
+  }
   resizing.value = true;
 
   document.addEventListener("mousemove", handleResize);
@@ -122,4 +124,5 @@ onUnmounted(() => {
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>
